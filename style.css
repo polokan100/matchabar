@@ -1156,3 +1156,22 @@ footer {
 footer div:last-child {
   color: #a3b2a2 !important; /* Jemnější šedozelená */
 }
+/* STYL PRO INFORMACI O ALERGENECH */
+.allergen-notice {
+  margin-top: 36px !important;
+  padding: 14px 20px !important;
+  background-color: #f4f7f3 !important;
+  border-left: 3px solid #799a73 !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  color: #4a5d4c !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.allergen-icon {
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}

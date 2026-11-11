@@ -134,38 +134,43 @@ header {
     align-items: center;
 }
 
+/* Logo a text */
 .logo-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--font-serif);
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
 }
 
-.logo-circle {
-    width: 44px;
-    height: 44px;
-    background: var(--primary);
-    color: #FAF8F5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    box-shadow: 0 4px 10px rgba(28, 48, 29, 0.15);
+.header-logo-img {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.logo-text {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.05 !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  color: #1c301d !important;
+  white-space: nowrap !important;
 }
 
 .logo-text small {
-    display: block;
-    font-family: var(--font-sans);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--matcha);
-    font-weight: 700;
-    margin-top: -3px;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  color: #799a73 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2.5px !important;
+  margin-top: 3px !important;
+  display: block !important;
 }
 
 nav {
@@ -865,7 +870,7 @@ section.container {
   font-family: var(--font-serif);
   color: #1a2e1a;
   margin: 8px 0 20px 0;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .location-address {
@@ -1103,4 +1108,51 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
+}
+/* Stylování loga v patičce */
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;       /* Udělá z obrázku perfektní kolečko */
+  object-fit: cover;
+  display: block;
+}
+
+/* Sjednocení výšky a vyrovnání prvků v patičce */
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+/* 1. Barva adresy (prostřední text) */
+.footer-wrap > div {
+  color: #e5dec9 !important; /* Krémová / světle zelená / bílá (#ffffff) */
+}
+
+/* 2. Barva odkazů na sítě (Instagram, TikTok, TasteTown) */
+.footer-wrap a {
+  color: #ffffff !important; /* Bílá barva odkazů */
+  transition: color 0.2s ease;
+}
+
+/* Změna barvy odkazu při najetí myší */
+.footer-wrap a:hover {
+  color: #a8e0a0 !important; /* Světle matcha zelená při najetí */
+}
+
+/* 3. Barva spodního textu s copyrightem (© 2026...) */
+footer div:last-child {
+  color: #a3b2a2 !important; /* Jemnější šedozelená */
 }

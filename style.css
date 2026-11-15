@@ -1854,3 +1854,28 @@ footer div:last-child {
 .btn-full-width { width: 100%; justify-content: center; }
 .footer-socials { display: flex; gap: 16px; }
 .footer-bottom { text-align: center; margin-top: 24px; font-size: 13px; }
+
+/* Srovnání bestsellerů a vycentrování tlačítka pod nimi */
+.bestsellers-grid {
+    align-items: stretch;
+}
+
+.bestseller-card {
+    height: 100%;
+}
+
+.bs-image-box {
+    background-color: #FFFFFF;
+}
+
+.menu-cta-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+/* Srovnání karty dárkového poukazu do původní šířky */
+.voucher-card-visual {
+    width: 100%;
+    box-sizing: border-box;
+}

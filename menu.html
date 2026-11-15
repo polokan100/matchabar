@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nabídka &amp; ceník | Matcha bar Ostrava – Poruba</title>
     <meta name="description" content="Kompletní nabídka a ceník Matcha baru v Ostravě-Porubě. Prémiová japonská matcha, výběrová káva, limonády a domácí dezerty.">
+    <meta name="keywords" content="matcha menu, matcha ceník ostrava, koblihy poruba">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Matcha bar Ostrava">
+    <link rel="canonical" href="https://matchabarostrava.cz/menu.html">
     <meta name="theme-color" content="#1C301D">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍵%3C/text%3E%3C/svg%3E">
 
-    <!-- Lokální styly -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
     <div class="top-bar">
         <span class="badge-isic">🎓 ISIC 10% SLEVA</span>
         Pro studenty po předložení ISIC karty &nbsp;|&nbsp;
-        🔥 TasteTown dealy: <strong>Matcha 1+1 ZDARMA</strong> & <strong>sleva 30 %</strong>
+        🔥 TasteTown dealy: <strong>Matcha 1+1 ZDARMA</strong> &amp; <strong>sleva 30 %</strong>
     </div>
 
     <header>
@@ -32,8 +35,8 @@
                 <span></span><span></span><span></span>
             </button>
             <nav id="main-nav" aria-label="Hlavní navigace">
-                <a href="menu.html" style="color: var(--primary); font-weight: 700;">Nabídka &amp; ceník</a>
-                <a href="index.html#vyhody">ISIC &amp; TasteTown</a>
+                <a href="menu.html" class="nav-active">Nabídka &amp; ceník</a>
+                <a href="index.html#vyhody">Výhody &amp; slevy</a>
                 <a href="index.html#instagram">Instagram</a>
                 <a href="index.html#recenze">Recenze</a>
                 <a href="index.html#poukazy">Poukazy</a>
@@ -44,13 +47,15 @@
     </header>
 
     <main>
-        <section id="menu" class="container" style="padding-top: 36px;">
+        <section id="menu" class="container menu-page-section">
             <a href="index.html" class="back-link">← Zpět na úvodní stránku</a>
 
-            <div class="section-header" style="margin-bottom: 32px;">
-         <span class="section-tag">Kompletní nabídka (35 položek)</span>
+            <div class="section-header header-compact">
+                <span class="section-tag">Kompletní nabídka (35 položek)</span>
                 <h1 class="section-title">Nabídka &amp; ceník</h1>
-                <p class="section-desc">Pravá japonská matcha šlehaná na přání, výběrová káva, limonády a domácí dezerty.</p>
+                <p class="section-desc">
+                    Každý drink šleháme čerstvě na objednávku z výběrové japonské matchy. V nabídce najdeš klasické i ovocné varianty s mlékem, osvěžující tonic, výběrovou kávu, domácí limonády a čerstvé dezerty.  V nabídce je také možnost alternativního mléka.
+                </p>
             </div>
 
             <!-- Ovládací panel: vyhledávání + ISIC přepínač -->
@@ -60,36 +65,33 @@
                     <input type="search" id="menu-search" placeholder="Hledat příchuť (např. marlenka, malina, pistácie…)" aria-label="Hledat v nabídce">
                 </div>
 
-                <label class="isic-switch" for="isic-toggle-menu">
-                    <input type="checkbox" id="isic-toggle-menu">
+                <label class="isic-switch" for="isic-toggle">
+                    <input type="checkbox" id="isic-toggle">
                     <span class="isic-slider"></span>
                     <span class="isic-label">🎓 Ceny s <strong>ISIC (-10 %)</strong></span>
                 </label>
             </div>
 
-            <!-- Filtry s limitkami na začátku -->
+            <!-- Filtry -->
             <div class="menu-filter-bar" role="group" aria-label="Filtr nabídky">
-<button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">Všechno (35)</button>
-<button type="button" class="filter-chip" data-filter="limitky" aria-pressed="false">✨ Limitované příchutě (5)</button>
-                <button type="button" class="filter-chip" data-filter="perliva" aria-pressed="false">🍵 S perlivou vodou (4)</button>
-                <button type="button" class="filter-chip" data-filter="mleko" aria-pressed="false">🍵 Klasické – s mlékem (10)</button>
-                <button type="button" class="filter-chip" data-filter="kokos" aria-pressed="false">🥥 S kokosovou vodou (1)</button>
-                <button type="button" class="filter-chip" data-filter="kava" aria-pressed="false">☕ Káva (5)</button>
-                <button type="button" class="filter-chip" data-filter="limonady" aria-pressed="false">🍋 Limonády (4)</button>
-                <button type="button" class="filter-chip" data-filter="dezerty" aria-pressed="false">🍩 Dezerty & koblihy (6)</button>
+                <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">Všechno (35)</button>
+                <button type="button" class="filter-chip" data-filter="limitky" aria-pressed="false">✨ Limitované příchutě (5)</button>
+                <button type="button" class="filter-chip" data-filter="mleko" aria-pressed="false">🍵 S mlékem (10)</button>
+                <button type="button" class="filter-chip" data-filter="voda" aria-pressed="false">💧 S vodou (3)</button>
+                <button type="button" class="filter-chip" data-filter="kava" aria-pressed="false">☕ Káva (4)</button>
+                <button type="button" class="filter-chip" data-filter="nealko" aria-pressed="false">🍋 Nealko &amp; limonády (6)</button>
+                <button type="button" class="filter-chip" data-filter="dezerty" aria-pressed="false">🍩 Dezerty &amp; koblihy (7)</button>
             </div>
 
-            <!-- Doplňky z TasteTown -->
+            <!-- Doplňky -->
             <div class="addons-banner">
                 <strong>✨ Doplňky (na kávu i matchu):</strong>
                 <span>🥛 Alternativní mléko <strong>+10 Kč</strong></span>
                 <span>🍯 Monin sirup <strong>+10 Kč</strong></span>
             </div>
 
-            <!-- Mřížka položek -->
-            <div class="menu-items-grid" id="menu-items-container">
-                <!-- Generováno JS -->
-            </div>
+            <!-- Mřížka položek (plní menu.js) -->
+            <div class="menu-items-grid" id="menu-grid"></div>
 
             <div id="menu-empty" class="menu-empty" hidden>
                 Pro hledaný výraz jsme nic nenašli. Zkus zadat jinou příchuť nebo vyber „Všechno“.
@@ -108,7 +110,7 @@
         <div class="container tray-inner">
             <div class="tray-summary">
                 <strong id="tray-count">0 položek</strong>
-                <span id="tray-items-list" class="tray-names"></span>
+                <span id="tray-names" class="tray-names"></span>
             </div>
             <div class="tray-prices">
                 <div>
@@ -128,8 +130,8 @@
     <div class="modal-overlay" id="modal-reservation" aria-hidden="true">
         <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button type="button" class="btn-close" data-close-modal aria-label="Zavřít">✕</button>
-            <h3 id="modal-title" style="font-family: var(--font-serif); font-size: 28px; color: var(--primary); margin-bottom: 6px;">Rezervovat stůl</h3>
-            <p style="color: var(--text-muted); font-size: 14px;">Pošlete nám žádost o rezervaci. Potvrdíme ji vám e-mailem.</p>
+            <h2 id="modal-title" class="modal-heading">Rezervovat stůl</h2>
+            <p class="modal-subtext">Pošlete nám žádost o rezervaci. Potvrdíme ji vám e-mailem.</p>
 
             <form class="form-grid" id="reservation-form" novalidate>
                 <div class="form-field full">
@@ -170,10 +172,10 @@
                     <label>Nevyplňovat <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
                 </div>
                 <div class="form-msg" id="form-msg" role="status" hidden></div>
-                <div class="form-field full" style="margin-top: 6px;">
-                    <button type="submit" class="btn-main" id="form-submit" style="width: 100%; justify-content: center;">Odeslat žádost</button>
+                <div class="form-field full form-submit-wrap">
+                    <button type="submit" class="btn-main btn-full-width" id="form-submit">Odeslat žádost</button>
                 </div>
-                <p class="form-note full" style="grid-column: 1 / -1;">Údaje použijeme jen k vyřízení rezervace. Více v <a href="zasady.html" target="_blank">zásadách zpracování osobních údajů</a>.</p>
+                <p class="form-note full">Údaje použijeme jen k vyřízení rezervace. Více v <a href="zasady.html" target="_blank">zásadách zpracování osobních údajů</a>.</p>
             </form>
         </div>
     </div>
@@ -185,318 +187,22 @@
                     <img src="img/logo1.png" alt="Matcha bar Ostrava" class="footer-logo">
                     <span>Matcha bar Ostrava</span>
                 </a>
-                <div style="color: #ccc; font-size: 14px;">
+                <div>
                     Ludvíka Podéště 1971/19, Ostrava-Poruba
                 </div>
-                <div style="display: flex; gap: 16px;">
+                <div class="footer-socials">
                     <a href="https://www.instagram.com/matchabar_ostrava/" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://www.tiktok.com/@matchabar_ostrava?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">TikTok</a>
                     <a href="https://www.tastetown.app/cs/restaurace/ostrava/matcha-bar-ostrava-2740#menu" target="_blank" rel="noopener">TasteTown</a>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 24px; font-size: 13px;">
+            <div class="footer-bottom">
                 &copy; 2026 Matcha bar Ostrava. Všechna práva vyhrazena.
                 <p>Provozovatel: Leontýna Skupinová, IČO 29686806 · Ludvíka Podéště 1971/19, Ostrava-Poruba · <a href="zasady.html">Zásady zpracování osobních údajů</a></p>
             </div>
         </div>
     </footer>
 
-    <script>
-    (function () {
-        'use strict';
-
-     var MENU_ITEMS = [
-            // ✨ Limitované příchutě (5)
-            { id: 1, name: "Matcha Marlenka", price: 159, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Pravá matcha, vrstva šlehačky, bohatý karamel a křupavý popcorn s příchutí marlenky." },
-            { id: 2, name: "Jablečný koláč", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Podzimní pohlazení – lahodná matcha, šlehačka, skořice a čerstvé plátky jablek." },
-            { id: 3, name: "Pumpkin Spice", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Hřejivé dýňové koření, šlehačka a křupavá skořicová drobenka." },
-            { id: 4, name: "Slaný karamel", price: 139, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Domácí slaný karamel, křupavá posypka a jemná matcha." },
-            { id: 5, name: "Toffee Matcha", price: 139, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Sametově krémová karamelka v kombinaci s výběrovou matchou." },
-
-            // 🍵 S perlivou vodou (4)
-            { id: 2, name: "Malina", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Intenzivní sladkokyselá chuť malin." },
-            { id: 3, name: "Peach", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Šťavnatá broskvová sladkost s letním nádechem." },
-            { id: 4, name: "Limeta", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Svěží citrusová chuť s příjemnou kyselostí." },
-            { id: 5, name: "Meloun", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Letní osvěžení plné šťavnatého vodního melounu." },
-
-            // 🍵 Klasické – s mlékem (10)
-            { id: 6, name: "Marshmallow pečený", price: 159, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Sladký zážitek s pečeným marshmallow a jemnou vanilkou." },
-            { id: 7, name: "Vanilla", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Klasická krémová vanilka v dokonalé harmonii s matchou." },
-            { id: 8, name: "Sakura", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Něžná květinová chuť japonské třešně." },
-            { id: 9, name: "Passion fruit", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Exotická a svěží chuť plná tropického šarmu." },
-            { id: 10, name: "Malina", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Intenzivní sladkokyselá chuť čerstvých malin." },
-            { id: 11, name: "Peach", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Šťavnatá broskvová sladkost s letním nádechem." },
-            { id: 12, name: "Curacao", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Tropický koktejlový nádech modré laguny." },
-            { id: 13, name: "Ube Matcha", price: 159, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Exotický fialový jam s jemnou oříškovou sladkostí." },
-            { id: 14, name: "Mango", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Bohatá tropická chuť zralého manga." },
-            { id: 15, name: "Cukrová vata", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Sladká nostalgie." },
-
-            // 🥥 S kokosovou vodou (1)
-            { id: 16, name: "Kokos", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Krémová exotika pravého kokosu." },
-
-            // ☕ Káva (5)
-            { id: 17, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "Výběrová káva připravená na přání." },
-            { id: 18, name: "Lungo", price: 59, cat: "kava", tag: "☕ Káva", desc: "Prodloužené espresso z výběrových zrn." },
-            { id: 19, name: "Americano", price: 59, cat: "kava", tag: "☕ Káva", desc: "Jemnější káva zalitá horkou vodou." },
-            { id: 20, name: "Cappuccino", price: 75, cat: "kava", tag: "☕ Káva", desc: "Espresso s bohatou sametovou mléčnou pěnou." },
-            { id: 21, name: "Latte", price: 75, cat: "kava", tag: "☕ Káva", desc: "Jemné mléčné kávové potěšení." },
-
-            // 🍋 Limonády (4)
-            { id: 22, name: "Malina", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "Osvěžující ovocná malinová limonáda." },
-            { id: 23, name: "Mango", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "Tropická mangová limonáda." },
-            { id: 24, name: "Broskev", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "Sladká broskvová limonáda." },
-            { id: 25, name: "Limeta", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "Svěží citrusová limetková limonáda." },
-
-            // 🍩 Dezerty & koblihy (6)
-            { id: 26, name: "Koláček", price: 69, cat: "dezerty", tag: "🍩 Dezerty", desc: "Nadýchaný domácí koláček." },
-            { id: 27, name: "Makronky", price: 49, cat: "dezerty", tag: "🍩 Dezerty", desc: "Křupavé makronky od Maliny." },
-            { id: 28, name: "Lotus kobliha", price: 79, cat: "dezerty", tag: "🍩 Dezerty", desc: "Ručně dělaná kobliha s karamelovou příchutí Lotus." },
-            { id: 29, name: "Mascarpone s rybízem kobliha", price: 79, cat: "dezerty", tag: "🍩 Dezerty", desc: "Nadýchaná kobliha s jemným mascarpone a rybízem." },
-            { id: 30, name: "Pistácie Malina kobliha", price: 79, cat: "dezerty", tag: "🍩 Dezerty", desc: "Pistáciový krém a svěží malinová náplň." },
-            { id: 31, name: "Kinder Bueno kobliha", price: 79, cat: "dezerty", tag: "🍩 Dezerty", desc: "Oblíbená kobliha s krémem Kinder Bueno." }
-        ];
-
-        var activeFilter = 'all';
-        var searchQuery = '';
-        var isicMode = false;
-        var tray = [];
-
-        var container = document.getElementById('menu-items-container');
-        var emptyEl = document.getElementById('menu-empty');
-
-        function formatPrice(base) {
-            if (isicMode) {
-                return '<s class="old-price">' + base + '</s> ' + Math.round(base * 0.9) + ' Kč';
-            }
-            return base + ' Kč';
-        }
-
-        function renderMenu() {
-            var q = searchQuery.trim().toLowerCase();
-            var filtered = MENU_ITEMS.filter(function (item) {
-                var catMatch = activeFilter === 'all' || item.cat === activeFilter;
-                var textMatch = !q || item.name.toLowerCase().indexOf(q) !== -1 || item.desc.toLowerCase().indexOf(q) !== -1 || item.tag.toLowerCase().indexOf(q) !== -1;
-                return catMatch && textMatch;
-            });
-
-            emptyEl.hidden = filtered.length > 0;
-
-            container.innerHTML = filtered.map(function (item) {
-                var count = tray.filter(function (x) { return x.id === item.id; }).length;
-                return (
-                    '<div class="menu-card">' +
-                        '<div>' +
-                            '<div class="menu-card-top">' +
-                                '<h2 class="menu-title">' + item.name + '</h2>' +
-                                '<span class="menu-price ' + (isicMode ? 'isic-active' : '') + '">' + formatPrice(item.price) + '</span>' +
-                            '</div>' +
-                            '<p class="menu-desc">' + item.desc + '</p>' +
-                        '</div>' +
-                        '<div class="bs-footer">' +
-                            '<span class="menu-cat-tag">' + item.tag + '</span>' +
-                            '<button type="button" class="btn-add-tray" data-add-id="' + item.id + '">' +
-                                (count > 0 ? '✓ V seznamu (' + count + ')' : '+ Spočítat') +
-                            '</button>' +
-                        '</div>' +
-                    '</div>'
-                );
-            }).join('');
-        }
-
-        function updateTray() {
-            var bar = document.getElementById('tray-bar');
-            if (!tray.length) {
-                bar.hidden = true;
-                return;
-            }
-            bar.hidden = false;
-            var total = tray.reduce(function (sum, it) { return sum + it.price; }, 0);
-            var isicTotal = Math.round(total * 0.9);
-            document.getElementById('tray-count').textContent =
-                tray.length + (tray.length === 1 ? ' položka' : tray.length < 5 ? ' položky' : ' položek');
-            document.getElementById('tray-items-list').textContent =
-                tray.map(function (it) { return it.name; }).join(', ');
-            document.getElementById('tray-total').textContent = total + ' Kč';
-            document.getElementById('tray-total-isic').textContent = isicTotal + ' Kč';
-        }
-
-        container.addEventListener('click', function (e) {
-            var btn = e.target.closest('[data-add-id]');
-            if (!btn) return;
-            var id = parseInt(btn.getAttribute('data-add-id'), 10);
-            var found = MENU_ITEMS.find(function (x) { return x.id === id; });
-            if (found) {
-                tray.push(found);
-                updateTray();
-                renderMenu();
-            }
-        });
-
-        document.getElementById('tray-clear').addEventListener('click', function () {
-            tray = [];
-            updateTray();
-            renderMenu();
-        });
-
-        document.querySelectorAll('.filter-chip').forEach(function (chip) {
-            chip.addEventListener('click', function () {
-                activeFilter = chip.getAttribute('data-filter');
-                document.querySelectorAll('.filter-chip').forEach(function (c) {
-                    var on = c === chip;
-                    c.classList.toggle('active', on);
-                    c.setAttribute('aria-pressed', on ? 'true' : 'false');
-                });
-                renderMenu();
-            });
-        });
-
-        document.getElementById('menu-search').addEventListener('input', function (e) {
-            searchQuery = e.target.value;
-            renderMenu();
-        });
-
-        document.getElementById('isic-toggle-menu').addEventListener('change', function (e) {
-            isicMode = e.target.checked;
-            renderMenu();
-        });
-
-        /* ===== Mobilní menu ===== */
-        var navToggle = document.getElementById('nav-toggle');
-        var nav = document.getElementById('main-nav');
-        function setNav(open) {
-            nav.classList.toggle('open', open);
-            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        }
-        navToggle.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
-        nav.addEventListener('click', function (e) {
-            if (e.target.closest('a') || e.target.closest('button')) setNav(false);
-        });
-
-        /* ===== Rezervace ===== */
-        var RESERVATION_EMAIL = 'polokan100@gmail.com';
-        var HOURS = { 0: [12, 18], 1: [10, 18], 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [12, 18] };
-        var MIN_LEAD_HOURS = 1;
-        var TZ = 'Europe/Prague';
-        var DOW = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-
-        function pragueNow() {
-            var parts = new Intl.DateTimeFormat('en-GB', {
-                timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23',
-                year: 'numeric', month: '2-digit', day: '2-digit'
-            }).formatToParts(new Date());
-            var o = {};
-            parts.forEach(function (p) { o[p.type] = p.value; });
-            return {
-                dow: DOW[o.weekday],
-                hour: parseInt(o.hour, 10),
-                minute: parseInt(o.minute, 10),
-                iso: o.year + '-' + o.month + '-' + o.day
-            };
-        }
-
-        var overlay = document.getElementById('modal-reservation');
-        var form = document.getElementById('reservation-form');
-        var dateInput = document.getElementById('f-date');
-        var timeSelect = document.getElementById('f-time');
-        var msg = document.getElementById('form-msg');
-        var submitBtn = document.getElementById('form-submit');
-
-        function fillTimes() {
-            var n = pragueNow();
-            var val = dateInput.value;
-            timeSelect.innerHTML = '';
-            if (!val) return;
-            var d = new Date(val + 'T12:00:00');
-            var h = HOURS[d.getDay()];
-            var first = h[0];
-            var last = h[1] - 1;
-            if (val === n.iso) first = Math.max(first, n.hour + MIN_LEAD_HOURS + (n.minute > 0 ? 1 : 0));
-            var count = 0;
-            for (var hr = first; hr <= last; hr++) {
-                var o = document.createElement('option');
-                o.value = o.textContent = hr + ':00';
-                timeSelect.appendChild(o);
-                count++;
-            }
-            if (!count) timeSelect.innerHTML = '<option value="">Na tento den už nejsou volné časy</option>';
-        }
-
-        function openModal() {
-            var today = pragueNow().iso;
-            dateInput.min = today;
-            if (!dateInput.value) dateInput.value = today;
-            fillTimes();
-            msg.hidden = true;
-            overlay.classList.add('active');
-            overlay.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            overlay.classList.remove('active');
-            overlay.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        document.querySelectorAll('[data-open-modal]').forEach(function (b) { b.addEventListener('click', openModal); });
-        document.querySelectorAll('[data-close-modal]').forEach(function (b) { b.addEventListener('click', closeModal); });
-        overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) closeModal(); });
-        dateInput.addEventListener('change', fillTimes);
-        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            msg.hidden = true;
-            if (!form.checkValidity() || !timeSelect.value) {
-                form.reportValidity();
-                return;
-            }
-            if (form.elements._honey.value) return;
-
-            var data = {
-                _subject: 'Rezervace: ' + form.elements['Jméno'].value + ', ' + dateInput.value + ' ' + timeSelect.value,
-                _template: 'table',
-                _captcha: 'false',
-                'Jméno': form.elements['Jméno'].value,
-                'email': form.elements.email.value,
-                'Telefon': form.elements['Telefon'].value || '–',
-                'Datum': dateInput.value,
-                'Čas': timeSelect.value,
-                'Počet osob': form.elements['Počet osob'].value,
-                'Poznámka': form.elements['Poznámka'].value || '–'
-            };
-
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Odesílám…';
-
-            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
-            .then(function (res) {
-                if (res.ok && String(res.j.success) === 'true') {
-                    form.reset();
-                    msg.hidden = false;
-                    msg.className = 'form-msg ok';
-                    msg.textContent = 'Děkujeme! Žádost jsme odeslali, potvrdíme ti ji e-mailem.';
-                    submitBtn.textContent = 'Odesláno ✓';
-                    setTimeout(function () { submitBtn.disabled = false; submitBtn.textContent = 'Odeslat žádost'; }, 4000);
-                } else {
-                    throw new Error('send failed');
-                }
-            })
-            .catch(function () {
-                msg.hidden = false;
-                msg.className = 'form-msg err';
-                msg.innerHTML = 'Odeslání se nepovedlo. Zkus to prosím znovu, nebo <a href="https://ig.me/m/matchabar_ostrava" target="_blank" rel="noopener">napiš nám na Instagram</a>.';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Odeslat žádost';
-            });
-        });
-
-        renderMenu();
-    })();
-    </script>
+    <script src="menu.js" defer></script>
 </body>
 </html>

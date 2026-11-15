@@ -196,7 +196,7 @@
             </div>
         </section>
 
-       <!-- 2. Sezónní drop & limitované příchutě -->
+      <!-- 2. Sezónní drop & limitované příchutě -->
         <section id="limitky" class="container">
             <div class="section-header header-compact">
                 <span class="section-tag">✨ Sezónní drop</span>
@@ -225,7 +225,7 @@
                     <div class="drop-actions">
                         <button type="button" class="btn-main" data-open-modal>📅 Rezervovat stůl</button>
                         <a href="menu.html" class="btn-outline">Zobrazit v menu</a>
-                        <button type="button" class="btn-share" data-share-drink="Matcha Marlenka (159 Kč)" aria-label="Sdílet Matcha Marlenka">📤 Sdílet</button>
+                        <button type="button" class="btn-share" data-share-drink="Matcha Marlenka (159 Kč)" onclick="shareDrink(this)" aria-label="Sdílet Matcha Marlenka">📤 Sdílet</button>
                     </div>
                 </div>
             </article>
@@ -245,7 +245,7 @@
                         </div>
                     </a>
                     <div class="seasonal-card-bottom">
-                        <button type="button" class="btn-share-mini" data-share-drink="Jablečný koláč Matcha (149 Kč)">📤 Poslat kámošovi</button>
+                        <button type="button" class="btn-share-mini" data-share-drink="Jablečný koláč Matcha (149 Kč)" onclick="shareDrink(this)">📤 Poslat kámošovi</button>
                     </div>
                 </article>
 
@@ -263,7 +263,7 @@
                         </div>
                     </a>
                     <div class="seasonal-card-bottom">
-                        <button type="button" class="btn-share-mini" data-share-drink="Pumpkin Spice Matcha (149 Kč)">📤 Poslat kámošovi</button>
+                        <button type="button" class="btn-share-mini" data-share-drink="Pumpkin Spice Matcha (149 Kč)" onclick="shareDrink(this)">📤 Poslat kámošovi</button>
                     </div>
                 </article>
 
@@ -281,7 +281,7 @@
                         </div>
                     </a>
                     <div class="seasonal-card-bottom">
-                        <button type="button" class="btn-share-mini" data-share-drink="Slaný karamel Matcha (139 Kč)">📤 Poslat kámošovi</button>
+                        <button type="button" class="btn-share-mini" data-share-drink="Slaný karamel Matcha (139 Kč)" onclick="shareDrink(this)">📤 Poslat kámošovi</button>
                     </div>
                 </article>
 
@@ -299,7 +299,7 @@
                         </div>
                     </a>
                     <div class="seasonal-card-bottom">
-                        <button type="button" class="btn-share-mini" data-share-drink="Toffee Matcha (139 Kč)">📤 Poslat kámošovi</button>
+                        <button type="button" class="btn-share-mini" data-share-drink="Toffee Matcha (139 Kč)" onclick="shareDrink(this)">📤 Poslat kámošovi</button>
                     </div>
                 </article>
             </div>
@@ -631,6 +631,31 @@ Určitě zde nejdu naposledy 🌸</blockquote>
     </footer>
 
 
-<script src="script.js?v=9" defer></script>
+<script>
+    function shareDrink(btn) {
+        var drink = btn.getAttribute('data-share-drink');
+        var url = window.location.origin + window.location.pathname + '#limitky';
+        var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
+        var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        function done() {
+            var orig = btn.textContent;
+            btn.textContent = 'Odkaz zkopírován ✓';
+            setTimeout(function () { btn.textContent = orig; }, 2200);
+        }
+
+        if (isMobile && navigator.share) {
+            navigator.share({ title: drink + ' · Matcha bar Ostrava', text: text, url: url }).catch(function () {});
+            return;
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(url).then(done).catch(function () {
+                window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
+            });
+        } else {
+            window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
+        }
+    }
+    </script>
 </body>
 </html>

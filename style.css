@@ -1650,3 +1650,29 @@ footer div:last-child {
     .photo-card { height: 200px; }
     .menu-items-grid { grid-template-columns: 1fr; }
 }
+.nav-active {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+.menu-page-section {
+    padding-top: 36px !important;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 13.5px;
+    margin-right: 4px;
+}
+
+.menu-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}

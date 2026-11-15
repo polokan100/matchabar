@@ -1676,3 +1676,157 @@ footer div:last-child {
     padding-top: 12px;
     border-top: 1px solid var(--border);
 }
+
+.modal-overlay.active {
+    display: grid !important;
+}
+/* Kompletní styly modálního okna a formuláře */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 28, 19, 0.62);
+    backdrop-filter: blur(4px);
+    display: none;
+    place-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: grid !important;
+}
+
+.modal-box {
+    position: relative;
+    background: var(--surface, #ffffff);
+    color: var(--text, #1C301D);
+    width: 100%;
+    max-width: 520px;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 26px;
+    padding: 34px 32px 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.btn-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #f2f1ec;
+    color: var(--primary, #1C301D);
+    font-size: 16px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.modal-heading {
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: 28px;
+    color: var(--primary, #1C301D);
+    margin: 0 0 6px;
+}
+
+.modal-subtext {
+    color: var(--text-muted, #556356);
+    font-size: 14.5px;
+    margin: 0 0 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field.full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--primary, #1C301D);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 14px;
+    border: 1.5px solid #dcdad0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 14.5px;
+    color: var(--text, #1C301D);
+    background: #faf9f5;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--matcha, #4d7c3f);
+    background: #ffffff;
+}
+
+.hp-field {
+    display: none !important;
+}
+
+.btn-full-width {
+    width: 100%;
+    justify-content: center;
+}
+
+.form-msg {
+    grid-column: 1 / -1;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.form-msg.ok {
+    background: #e7f4e4;
+    color: #1c4a1e;
+}
+
+.form-msg.err {
+    background: #fdeaea;
+    color: #8b1e1e;
+}
+
+.form-note.full {
+    grid-column: 1 / -1;
+    font-size: 12.5px;
+    color: var(--text-muted, #556356);
+    text-align: center;
+    margin: 4px 0 0;
+}
+
+.form-note a {
+    color: var(--primary, #1C301D);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (max-width: 540px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-box {
+        padding: 28px 20px 24px;
+    }
+}

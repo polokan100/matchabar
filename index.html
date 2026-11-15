@@ -59,20 +59,19 @@
 
     <header>
         <div class="container nav-wrap">
-            <a href="#" class="logo-brand" aria-label="Matcha bar Ostrava – nahoru">
-          <a href="#" class="logo-brand">
-    <img src="img/logo1.png" alt="Matcha bar Ostrava logo" class="header-logo-img">
-    <div class="logo-text">
-        Matcha bar
-        <small>Ostrava · Poruba</small>
-    </div>
-</a>
+            <a href="#" class="logo-brand">
+                <img src="img/logo1.png" alt="Matcha bar Ostrava logo" class="header-logo-img">
+                <div class="logo-text">
+                    Matcha bar
+                    <small>Ostrava · Poruba</small>
+                </div>
+            </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
                 <span></span><span></span><span></span>
             </button>
             <nav id="main-nav" aria-label="Hlavní navigace">
-                <a href="#menu">Nabídka & ceník</a>
-                <a href="#vyhody">ISIC & TasteTown</a>
+                <a href="menu.html">Nabídka & ceník</a>
+                <a href="#vyhody">Výhody & slevy</a>
                 <a href="#instagram">Instagram</a>
                 <a href="#recenze">Recenze</a>
                 <a href="#poukazy">Poukazy</a>
@@ -97,7 +96,7 @@
                 </p>
                 <div class="hero-buttons">
                     <button type="button" class="btn-main" data-open-modal>📅 Rezervovat stůl</button>
-                    <a href="#menu" class="btn-outline">Prohlédnout menu</a>
+                    <a href="menu.html" class="btn-outline">Prohlédnout menu</a>
                 </div>
             </div>
             <div class="hero-img-container">
@@ -114,283 +113,249 @@
             </div>
         </section>
 
-        <section id="vyhody" class="container">
-            <h2 class="sr-only">Slevy a výhody</h2>
-            <div class="promo-grid">
-                <div class="promo-card promo-tastetown">
-                    <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #A8E0A0;">TasteTown aplikace</span>
-                    <h3 style="margin-top: 10px;">Odemkni dealy na TasteTown</h3>
-                    <p>Využij exkluzivní slevy při návštěvě našeho Matcha baru </p>
-                    <ul class="promo-features">
-                        <li>🍵 <span><strong>Matcha 1+1 ZDARMA</strong> (ušetříš až 149 Kč)</span></li>
-                        <li>🏷️ <span><strong>Sleva 30 %</strong> na celý účet v podniku i s sebou</span></li>
-                    </ul>
-                    <a href="https://www.tastetown.app/cs/restaurace/ostrava/matcha-bar-ostrava-2740#menu" target="_blank" rel="noopener" class="btn-main" style="background: var(--gold); color: #1C301D;">
-                        📲 Odemknout v aplikaci
-                    </a>
-                </div>
-
-                <div class="promo-card promo-isic">
-                    <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #1C301D;">Studentská výhoda</span>
-                    <h3 style="margin-top: 10px;">Sleva 10 % pro studenty s ISIC</h3>
-                    <p>Jsi student? Předlož před placením platný průkaz ISIC a získáš slevu 10 % na jakýkoliv nápoj i dezert.</p>
-                    <ul class="promo-features">
-                        <li>🎓 <span>Platí na celý sortiment v nabídce</span></li>
-                        <li>💳 <span>Stačí ukázat fyzickou kartu nebo aplikaci ISIC</span></li>
-                    </ul>
-                    <a href="#menu" class="btn-outline" style="border-color: #1C301D; display: inline-block;">Vybrat si z menu</a>
-                </div>
-            </div>
-        </section>
-
+        <!-- 1. Ochutnávka z nabídky (Bestsellery hned nahoře) -->
         <section id="menu" class="container">
-            <div class="section-header">
-                <span class="section-tag">Kompletní nabídka</span>
-                <h2 class="section-title">Co si u nás dáte?</h2>
-                <p class="section-desc">Pravá japonská matcha šlehaná na přání, výběrová káva a ručně dělané koblihy.</p>
+            <div class="section-header" style="margin-bottom: 28px;">
+                <span class="section-tag">Ochutnávka z nabídky</span>
+                <h2 class="section-title">Naše bestsellery</h2>
+                <p class="section-desc">Pravá japonská matcha šlehaná na přání, výběrová káva a ručně dělané dezerty.</p>
             </div>
 
-            <div class="menu-filter-bar" role="group" aria-label="Filtr nabídky">
-                <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">Všechno</button>
-                <button type="button" class="filter-chip" data-filter="limitky" aria-pressed="false">✨ Limitky & speciály</button>
-                <button type="button" class="filter-chip" data-filter="perliva" aria-pressed="false">🍵 S perlivou vodou</button>
-                <button type="button" class="filter-chip" data-filter="mleko" aria-pressed="false">🍵 S mlékem</button>
-                <button type="button" class="filter-chip" data-filter="kokos" aria-pressed="false">🥥 S kokosovou vodou</button>
-                <button type="button" class="filter-chip" data-filter="kava" aria-pressed="false">☕ Káva</button>
-                <button type="button" class="filter-chip" data-filter="limonady" aria-pressed="false">🍋 Limonády</button>
-                <button type="button" class="filter-chip" data-filter="koblihy" aria-pressed="false">🍩 Koblihy & dezerty</button>
+            <div class="bestsellers-grid">
+                <!-- 1. Malina -->
+                <article class="bestseller-card featured">
+                    <div class="bs-badge">🔥 Nejoblíbenější</div>
+                    <div class="bs-image-box">
+                        <img src="img/malina1.png" alt="Malina Matcha" class="bs-img" loading="lazy">
+                    </div>
+                    <div class="menu-card-top">
+                        <h3 class="menu-title">Malina</h3>
+                        <span class="menu-price">139 Kč</span>
+                    </div>
+                    <p class="menu-desc">Intenzivní sladkokyselá chuť čerstvých malin s matchou a mlékem.</p>
+                    <div class="bs-footer">
+                        <span class="menu-cat-tag">🍵 S mlékem</span>
+                    </div>
+                </article>
+
+                <!-- 2. Ube -->
+                <article class="bestseller-card">
+                    <div class="bs-badge soft">✨ Oblíbená volba</div>
+                    <div class="bs-image-box">
+                        <img src="img/ube1.png" alt="Ube Matcha" class="bs-img" loading="lazy">
+                    </div>
+                    <div class="menu-card-top">
+                        <h3 class="menu-title">Ube Matcha</h3>
+                        <span class="menu-price">159 Kč</span>
+                    </div>
+                    <p class="menu-desc">Exotický fialový jam s jemnou oříškovou sladkostí.</p>
+                    <div class="bs-footer">
+                        <span class="menu-cat-tag">🍵 S mlékem</span>
+                    </div>
+                </article>
+
+                <!-- 3. Mango -->
+                <article class="bestseller-card">
+                    <div class="bs-badge soft">🥭 Ovocné pohlazení</div>
+                    <div class="bs-image-box">
+                        <img src="img/mango1.png" alt="Mango Matcha" class="bs-img" loading="lazy">
+                    </div>
+                    <div class="menu-card-top">
+                        <h3 class="menu-title">Mango Matcha</h3>
+                        <span class="menu-price">149 Kč</span>
+                    </div>
+                    <p class="menu-desc">Bohatá tropická chuť zralého manga v harmonii s matchou.</p>
+                    <div class="bs-footer">
+                        <span class="menu-cat-tag">🍵 S mlékem</span>
+                    </div>
+                </article>
+
+                <!-- 4. Makronky -->
+                <article class="bestseller-card">
+                    <div class="bs-badge soft">🍩 Ručně dělané</div>
+                    <div class="bs-image-box">
+                        <img src="img/makronky2.png" alt=" Makronky" class="bs-img" loading="lazy">
+                    </div>
+                    <div class="menu-card-top">
+                        <h3 class="menu-title"> Makronky</h3>
+                        <span class="menu-price">49 Kč</span>
+                    </div>
+                    <p class="menu-desc">Křupavé makronky od Maliny.</p>
+                    <div class="bs-footer">
+                        <span class="menu-cat-tag">🍩 Dezerty</span>
+                    </div>
+                </article>
             </div>
 
-            <div class="menu-items-grid" id="menu-items-container">
-                <div class="menu-card featured" data-cat="limitky">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Matcha Marlenka (Limitka)</h3>
-                            <span class="menu-price">169 Kč</span>
-                        </div>
-                        <p class="menu-desc">Sezónní speciál se šlehačkou, karamelem a popcornem s příchutí Marlenky.</p>
-                    </div>
-                    <span class="menu-cat-tag">✨ Limitovaný speciál</span>
-                </div>
-                <div class="menu-card" data-cat="perliva">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Malina</h3>
-                            <span class="menu-price">129 Kč</span>
-                        </div>
-                        <p class="menu-desc">Intenzivní sladkokyselá chuť malin s perlivou vodou.</p>
-                    </div>
-                    <span class="menu-cat-tag">S perlivou vodou</span>
-                </div>
-                <div class="menu-card" data-cat="perliva">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Peach (Broskev)</h3>
-                            <span class="menu-price">129 Kč</span>
-                        </div>
-                        <p class="menu-desc">Šťavnatá broskvová sladkost s letním nádechem.</p>
-                    </div>
-                    <span class="menu-cat-tag">S perlivou vodou</span>
-                </div>
-                <div class="menu-card" data-cat="perliva">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Limeta</h3>
-                            <span class="menu-price">129 Kč</span>
-                        </div>
-                        <p class="menu-desc">Svěží citrusová chuť s příjemnou kyselostí.</p>
-                    </div>
-                    <span class="menu-cat-tag">S perlivou vodou</span>
-                </div>
-                <div class="menu-card" data-cat="perliva">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Meloun</h3>
-                            <span class="menu-price">129 Kč</span>
-                        </div>
-                        <p class="menu-desc">Letní osvěžení plné šťavnatého vodního melounu.</p>
-                    </div>
-                    <span class="menu-cat-tag">S perlivou vodou</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Marshmallow Pečený</h3>
-                            <span class="menu-price">159 Kč</span>
-                        </div>
-                        <p class="menu-desc">Sladký zážitek s pečeným marshmallow a vanilkou.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Ube Matcha</h3>
-                            <span class="menu-price">159 Kč</span>
-                        </div>
-                        <p class="menu-desc">Exotický fialový jam s oříškovou sladkostí.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Sakura (Japonská třešeň)</h3>
-                            <span class="menu-price">149 Kč</span>
-                        </div>
-                        <p class="menu-desc">Něžná květinová chuť japonské třešně.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Curacao Modrá Laguna</h3>
-                            <span class="menu-price">149 Kč</span>
-                        </div>
-                        <p class="menu-desc">Tropický koktejlový nádech modré laguny.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Passion Fruit</h3>
-                            <span class="menu-price">149 Kč</span>
-                        </div>
-                        <p class="menu-desc">Exotická chuť plná tropického šarmu.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Mango Matcha</h3>
-                            <span class="menu-price">149 Kč</span>
-                        </div>
-                        <p class="menu-desc">Bohatá tropická chuť zralého manga.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Vanilla Matcha</h3>
-                            <span class="menu-price">139 Kč</span>
-                        </div>
-                        <p class="menu-desc">Klasická krémová vanilka v harmonii s matchou.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="mleko">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Cukrová Vata</h3>
-                            <span class="menu-price">149 Kč</span>
-                        </div>
-                        <p class="menu-desc">Sladká nostalgie a nadýchaná chuť.</p>
-                    </div>
-                    <span class="menu-cat-tag">S mlékem</span>
-                </div>
-                <div class="menu-card" data-cat="kokos">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Kokos Matcha</h3>
-                            <span class="menu-price">139 Kč</span>
-                        </div>
-                        <p class="menu-desc">Krémová exotika pravé kokosové vody.</p>
-                    </div>
-                    <span class="menu-cat-tag">S kokosovou vodou</span>
-                </div>
-                <div class="menu-card" data-cat="kava">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Espresso</h3>
-                            <span class="menu-price">59 Kč</span>
-                        </div>
-                        <p class="menu-desc">Silná káva z výběrových zrn.</p>
-                    </div>
-                    <span class="menu-cat-tag">Káva</span>
-                </div>
-                <div class="menu-card" data-cat="kava">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Cappuccino</h3>
-                            <span class="menu-price">75 Kč</span>
-                        </div>
-                        <p class="menu-desc">Jemná mléčná pěna a espresso.</p>
-                    </div>
-                    <span class="menu-cat-tag">Káva</span>
-                </div>
-                <div class="menu-card" data-cat="kava">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Latte Macchiato</h3>
-                            <span class="menu-price">75 Kč</span>
-                        </div>
-                        <p class="menu-desc">Jemná trojvrstvá káva.</p>
-                    </div>
-                    <span class="menu-cat-tag">Káva</span>
-                </div>
-                <div class="menu-card" data-cat="limonady">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Malinová limonáda</h3>
-                            <span class="menu-price">85 Kč</span>
-                        </div>
-                        <p class="menu-desc">Osvěžující ovocná limonáda.</p>
-                    </div>
-                    <span class="menu-cat-tag">Limonády</span>
-                </div>
-                <div class="menu-card" data-cat="koblihy">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Kobliha Kinder Bueno</h3>
-                            <span class="menu-price">79 Kč</span>
-                        </div>
-                        <p class="menu-desc">Nadýchaná kobliha s krémem Kinder Bueno.</p>
-                    </div>
-                    <span class="menu-cat-tag">Koblihy & Dezerty</span>
-                </div>
-                <div class="menu-card" data-cat="koblihy">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Kobliha Pistácie & Malina</h3>
-                            <span class="menu-price">79 Kč</span>
-                        </div>
-                        <p class="menu-desc">Pistáciový krém a svěží malinová náplň.</p>
-                    </div>
-                    <span class="menu-cat-tag">Koblihy & Dezerty</span>
-                </div>
-                <div class="menu-card" data-cat="koblihy">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Kobliha Lotus</h3>
-                            <span class="menu-price">79 Kč</span>
-                        </div>
-                        <p class="menu-desc">Kobliha s karamelovou Lotus polevou.</p>
-                    </div>
-                    <span class="menu-cat-tag">Koblihy & Dezerty</span>
-                </div>
-                <div class="menu-card" data-cat="koblihy">
-                    <div>
-                        <div class="menu-card-top">
-                            <h3 class="menu-title">Mascarpone s rybízem</h3>
-                            <span class="menu-price">79 Kč</span>
-                        </div>
-                        <p class="menu-desc">Jemné mascarpone s červeným rybízem.</p>
-                    </div>
-                    <span class="menu-cat-tag">Koblihy & Dezerty</span>
-                </div>
+            <div class="menu-cta-box" style="text-align: center; margin-top: 36px;">
+                <a href="menu.html" class="btn-main">
+                    Zobrazit kompletní nabídku &amp; ceník (35 položek) →
+                </a>
+            </div>
+ <!-- MODERNÍ EDITORIAL SEKCE: LIMITKA & PODZIMNÍ EDICE -->
+        <section id="limitky" class="container">
+            <div class="section-header" style="margin-bottom: 34px;">
+                <span class="section-tag">✨ Sezónní drop</span>
+                <h2 class="section-title">Limitovaná příchuť &amp; podzimní edice</h2>
+                <p class="section-desc">Speciální receptury, které u nás najdeš jen po omezenou dobu.</p>
             </div>
 
-                            <!-- Upozornění na alergeny pod nabídkou -->
-<div class="allergen-notice">
-    <span class="allergen-icon">ℹ️</span>
-    <span>Informace o obsažených alergenech vám na vyžádání poskytne obsluha nebo je najdete v tištěném menu v baru.</span>
-</div>
+            <!-- 1. Hlavní limitka: Matcha Marlenka (celá fotka bez ořezu + čistý popis) -->
+            <article class="featured-drop-card">
+                <div class="featured-drop-media">
+                    <img src="img/Limitka.png" alt="Limitovaná příchuť Matcha Marlenka" loading="lazy">
+                </div>
+                <div class="featured-drop-body">
+                    <span class="drop-pill">🔥 Limitovaná příchuť</span>
+                    <div class="drop-title-row">
+                        <h3>Matcha Marlenka</h3>
+                        <span class="drop-price">159 Kč</span>
+                    </div>
+                    <p class="drop-desc">
+                        Pravá japonská matcha, nadýchaná šlehačka, bohatý karamel a křupavý popcorn s příchutí marlenky. Sladká odměna, kterou jinde neochutnáš.
+                    </p>
+                    <div class="drop-tags">
+                        <span>🍿 Popcorn Marlenka</span>
+                        <span>🍯 Karamel</span>
+                        <span>🍦 Šlehačka</span>
+                    </div>
+                    <div class="drop-actions">
+                        <button type="button" class="btn-main" data-open-modal>📅 Rezervovat stůl</button>
+                        <a href="menu.html" class="btn-outline">Zobrazit v menu</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Podzimní speciály (4 čisté karty vedle sebe, světlý styl jako zbytek webu) -->
+            <div class="seasonal-grid">
+                <article class="seasonal-card">
+                    <div class="seasonal-img-wrap">
+                        <img src="img/jablecnykolac.png" alt="Jablečný koláč Matcha" loading="lazy">
+                    </div>
+                    <div class="seasonal-info">
+                        <div class="seasonal-head">
+                            <h4>Jablečný koláč</h4>
+                            <span>149 Kč</span>
+                        </div>
+                        <p>Šlehačka, skořice a čerstvé plátky jablek.</p>
+                    </div>
+                </article>
+
+                <article class="seasonal-card">
+                    <div class="seasonal-img-wrap">
+                        <img src="img/pumpkin.png" alt="Pumpkin Spice Matcha" loading="lazy">
+                    </div>
+                    <div class="seasonal-info">
+                        <div class="seasonal-head">
+                            <h4>Pumpkin Spice</h4>
+                            <span>149 Kč</span>
+                        </div>
+                        <p>Dýňové koření, šlehačka a skořicová drobenka.</p>
+                    </div>
+                </article>
+
+                <article class="seasonal-card">
+                    <div class="seasonal-img-wrap">
+                        <img src="img/slanykaramel.png" alt="Slaný karamel Matcha" loading="lazy">
+                    </div>
+                    <div class="seasonal-info">
+                        <div class="seasonal-head">
+                            <h4>Slaný karamel</h4>
+                            <span>139 Kč</span>
+                        </div>
+                        <p>Domácí slaný karamel a křupavá posypka.</p>
+                    </div>
+                </article>
+
+                <article class="seasonal-card">
+                    <div class="seasonal-img-wrap">
+                        <img src="img/toffee.png" alt="Toffee Matcha" loading="lazy">
+                    </div>
+                    <div class="seasonal-info">
+                        <div class="seasonal-head">
+                            <h4>Toffee Matcha</h4>
+                            <span>139 Kč</span>
+                        </div>
+                        <p>Krémová karamelka s jemnou matchou.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
+<!-- DVĚ KARTY VEDLE SEBE: TASTETOWN & ISIC -->
+        <section id="vyhody" class="container">
+            <div style="margin-bottom: 28px;">
+                <span class="section-tag">Výhody &amp; slevy</span>
+                <h2 class="section-title" style="margin-bottom: 6px;">Matcha se slevou</h2>
+                <p style="color: var(--text-muted); font-size: 16px;">Vem kámoše na drink zdarma nebo ušetři se studentskou kartou.</p>
+            </div>
+
+            <div class="perks-grid">
+                <!-- 1. TasteTown karta -->
+                <article class="perk-card perk-tt">
+                    <div class="perk-top">
+                        <div>
+                            <span class="perk-badge tt">📲 TasteTown</span>
+                            <h3>Drink 1+1 zdarma</h3>
+                        </div>
+                        <div class="perk-big-tag tt">1+1</div>
+                    </div>
+
+                    <p class="perk-desc">
+                        V aplikaci TasteTown na tebe čekají speciální dealy, které uplatníš přímo u pultu:
+                    </p>
+
+                    <ul class="perk-list">
+                        <li>
+                            <span class="perk-check">✓</span>
+                            <span><strong>Matcha 1+1 ZDARMA</strong> – druhá je na nás</span>
+                        </li>
+                        <li>
+                            <span class="perk-check">✓</span>
+                            <span><strong>Sleva 30 %</strong> na celý účet na místě i s sebou</span>
+                        </li>
+                    </ul>
+
+                    <div class="perk-footer">
+                        <a href="https://www.tastetown.app/cs/restaurace/ostrava/matcha-bar-ostrava-2740#menu" target="_blank" rel="noopener" class="btn-main">
+                            Odemknout v aplikaci →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 2. ISIC karta -->
+                <article class="perk-card perk-isic">
+                    <div class="perk-top">
+                        <div>
+                            <span class="perk-badge isic">🎓 Pro studenty</span>
+                            <h3>Sleva s kartou ISIC</h3>
+                        </div>
+                        <div class="perk-big-tag isic">-10 %</div>
+                    </div>
+
+                    <p class="perk-desc">
+                        Jsi student? Předlož před placením platný průkaz ISIC a získáš okamžitou slevu na celý nákup:
+                    </p>
+
+                    <ul class="perk-list">
+                        <li>
+                            <span class="perk-check">✓</span>
+                            <span><strong>10 % sleva</strong> na jakoukoliv matchu, kávu i dezert</span>
+                        </li>
+                        <li>
+                            <span class="perk-check">✓</span>
+                            <span>Stačí mít u sebe kartičku nebo aplikaci <strong>Alive</strong></span>
+                        </li>
+                    </ul>
+
+                    <div class="perk-footer">
+                        <a href="menu.html" class="btn-outline">
+                            Mrknout na menu →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
         <section id="instagram" class="container">
             <div class="instagram-header">
                 <span class="insta-handle-tag">@MATCHABAR_OSTRAVA</span>
@@ -612,19 +577,15 @@
     </div>
 
     <footer>
- <div class="container">
-        <div class="footer-wrap">
-            
-            <!-- Logo + Název -->
-            <a href="#" class="footer-brand">
-                <img src="img/logo1.png"Matcha bar Ostrava" class="footer-logo">
-                <span>Matcha bar Ostrava</span>
-            </a>
-
-            <!-- Adresa -->
-            <div style="color: #ccc; font-size: 14px;">
-                Ludvíka Podéště 1971/19, Ostrava-Poruba
-            </div>
+        <div class="container">
+            <div class="footer-wrap">
+                <a href="#" class="footer-brand">
+                    <img src="img/logo1.png" alt="Matcha bar Ostrava" class="footer-logo">
+                    <span>Matcha bar Ostrava</span>
+                </a>
+                <div style="color: #ccc; font-size: 14px;">
+                    Ludvíka Podéště 1971/19, Ostrava-Poruba
+                </div>
                 <div style="display: flex; gap: 16px;">
                     <a href="https://www.instagram.com/matchabar_ostrava/" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://www.tiktok.com/@matchabar_ostrava?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">TikTok</a>
@@ -644,16 +605,11 @@
     (function () {
         'use strict';
 
-        /* ===== NASTAVENÍ ===== */
-        // Na tuto adresu budou chodit rezervace (přes formsubmit.co, viz README).
         var RESERVATION_EMAIL = 'polokan100@gmail.com';
-
-        // Otevírací doba: den v týdnu (0 = neděle) -> [otevírá, zavírá]
         var HOURS = { 0: [12, 18], 1: [10, 18], 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [12, 18] };
-        var MIN_LEAD_HOURS = 1; // rezervovat lze nejdřív hodinu předem
+        var MIN_LEAD_HOURS = 1;
         var TZ = 'Europe/Prague';
 
-        /* ===== Čas v Praze (nezávisle na časovém pásmu návštěvníka) ===== */
         var DOW = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
         function pragueNow() {
             var parts = new Intl.DateTimeFormat('en-GB', {
@@ -669,9 +625,7 @@
                 iso: o.year + '-' + o.month + '-' + o.day
             };
         }
-        function pad(n) { return (n < 10 ? '0' : '') + n; }
 
-        /* ===== Stav otevřeno / zavřeno ===== */
         function updateOpeningStatus() {
             var el = document.getElementById('opening-status');
             var pill = document.getElementById('status-pill');
@@ -693,7 +647,6 @@
             pill.classList.toggle('closed', !open);
         }
 
-        /* ===== Mobilní menu ===== */
         var navToggle = document.getElementById('nav-toggle');
         var nav = document.getElementById('main-nav');
         function setNav(open) {
@@ -705,24 +658,6 @@
             if (e.target.closest('a') || e.target.closest('button')) setNav(false);
         });
 
-        /* ===== Filtr menu ===== */
-        var chips = document.querySelectorAll('.filter-chip');
-        var cards = document.querySelectorAll('#menu-items-container .menu-card');
-        chips.forEach(function (chip) {
-            chip.addEventListener('click', function () {
-                var f = chip.getAttribute('data-filter');
-                chips.forEach(function (c) {
-                    var on = c === chip;
-                    c.classList.toggle('active', on);
-                    c.setAttribute('aria-pressed', on ? 'true' : 'false');
-                });
-                cards.forEach(function (card) {
-                    card.hidden = !(f === 'all' || card.getAttribute('data-cat') === f);
-                });
-            });
-        });
-
-        /* ===== Načtení embedů až po kliknutí (Instagram, Google Maps) ===== */
         document.getElementById('load-reel').addEventListener('click', function () {
             var box = document.getElementById('reel-box');
             box.innerHTML = '<iframe src="https://www.instagram.com/reel/DeRzeYosuUJ/embed" title="Instagram reel Matcha baru" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy"></iframe>';
@@ -732,7 +667,6 @@
             box.innerHTML = '<iframe title="Mapa – Matcha bar Ostrava" src="https://www.google.com/maps?q=Ludv%C3%ADka+Pod%C3%A9%C5%A1t%C4%9B+1971%2F19+Ostrava&output=embed&hl=cs" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
         });
 
-        /* ===== Rezervace ===== */
         var overlay = document.getElementById('modal-reservation');
         var form = document.getElementById('reservation-form');
         var dateInput = document.getElementById('f-date');
@@ -752,7 +686,7 @@
             var d = new Date(val + 'T12:00:00');
             var h = HOURS[d.getDay()];
             var first = h[0];
-            var last = h[1] - 1; // poslední začátek hodinu před zavíračkou
+            var last = h[1] - 1;
             if (val === n.iso) first = Math.max(first, n.hour + MIN_LEAD_HOURS + (n.minute > 0 ? 1 : 0));
             var count = 0;
             for (var hr = first; hr <= last; hr++) {
@@ -799,7 +733,7 @@
         document.addEventListener('keydown', function (e) {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'Escape') { closeModal(); return; }
-            if (e.key === 'Tab') { // focus trap
+            if (e.key === 'Tab') {
                 var f = overlay.querySelectorAll('button, input:not([tabindex="-1"]), select, textarea, a[href]');
                 f = Array.prototype.filter.call(f, function (x) { return !x.disabled && x.offsetParent !== null; });
                 if (!f.length) return;
@@ -818,7 +752,7 @@
                 if (!timeSelect.value) showMsg('err', 'Vyber prosím datum a čas, na který lze rezervovat.');
                 return;
             }
-            if (form.elements._honey.value) return; // robot
+            if (form.elements._honey.value) return;
 
             var igLink = '<a href="https://ig.me/m/matchabar_ostrava" target="_blank" rel="noopener">napiš nám na Instagram</a>';
             if (RESERVATION_EMAIL.indexOf('DOPLNIT') !== -1) {
@@ -867,6 +801,77 @@
 
         updateOpeningStatus();
         setInterval(updateOpeningStatus, 60000);
+/* ===== Interaktivní přepínač podzimních speciálů ===== */
+        var SEASONAL_DATA = {
+            jablko: {
+                title: "Jablečný koláč",
+                price: "149 Kč",
+                img: "img/jablecnykolac.jpg",
+                desc: "Podzimní pohlazení – lahodná matcha, vrstva šlehačky, voňavá skořice a čerstvé plátky jablek.",
+                notes: ["🍏 Čerstvé jablko", "🌿 Skořice", "🍦 Šlehačka"],
+                aura: "radial-gradient(circle, rgba(163, 198, 118, 0.32) 0%, transparent 70%)"
+            },
+            pumpkin: {
+                title: "Pumpkin Spice",
+                price: "149 Kč",
+                img: "img/pumpkin.jpg",
+                desc: "Hřejivé dýňové koření, bohatá šlehačková čepice, skořice a křupavá skořicová drobenka.",
+                notes: ["🎃 Dýňové koření", "✨ Skořicová drobenka", "🍦 Šlehačka"],
+                aura: "radial-gradient(circle, rgba(224, 152, 86, 0.32) 0%, transparent 70%)"
+            },
+            karamel: {
+                title: "Slaný karamel",
+                price: "139 Kč",
+                img: "img/slanykaramel.jpg",
+                desc: "Perfektní rovnováha sladkého domácího karamelu, křupavých karamelových kousků a jemné matchy.",
+                notes: ["🧂 Mořská sůl", "🍯 Domácí karamel", "✨ Křupavý topping"],
+                aura: "radial-gradient(circle, rgba(212, 170, 106, 0.32) 0%, transparent 70%)"
+            },
+            toffee: {
+                title: "Toffee Matcha",
+                price: "139 Kč",
+                img: "img/toffee.png",
+                desc: "Sametově krémová karamelka v kombinaci s výběrovou japonskou matchou a jemnou pěnou.",
+                notes: ["🍬 Karamelka Toffee", "🥛 Krémová pěna", "🍵 Prémiová matcha"],
+                aura: "radial-gradient(circle, rgba(186, 154, 110, 0.30) 0%, transparent 70%)"
+            }
+        };
+
+        var scTabs = document.querySelectorAll('.showcase-tab');
+        if (scTabs.length) {
+            scTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var key = tab.getAttribute('data-seasonal');
+                    var item = SEASONAL_DATA[key];
+                    if (!item) return;
+
+                    scTabs.forEach(function (t) {
+                        var active = t === tab;
+                        t.classList.toggle('active', active);
+                        t.setAttribute('aria-selected', active ? 'true' : 'false');
+                    });
+
+                    var imgEl = document.getElementById('sc-img');
+                    imgEl.style.opacity = '0';
+                    imgEl.style.transform = 'scale(0.95)';
+
+                    setTimeout(function () {
+                        document.getElementById('sc-title').textContent = item.title;
+                        document.getElementById('sc-price').textContent = item.price;
+                        document.getElementById('sc-desc').textContent = item.desc;
+                        document.getElementById('sc-aura').style.background = item.aura;
+                        imgEl.src = item.img;
+                        imgEl.alt = item.title;
+                        document.getElementById('sc-notes').innerHTML = item.notes.map(function (n) {
+                            return '<span>' + n + '</span>';
+                        }).join('');
+
+                        imgEl.style.opacity = '1';
+                        imgEl.style.transform = 'scale(1)';
+                    }, 160);
+                });
+            });
+        }
     })();
     </script>
 </body>

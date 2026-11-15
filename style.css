@@ -367,152 +367,156 @@ section.container {
     font-size: 16.5px;
 }
 
-/* Menu Section */
-.menu-filter-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 38px;
-}
 
-.filter-chip {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 10px 22px;
-    border-radius: 99px;
-    font-weight: 600;
-    font-size: 14.5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filter-chip:hover, .filter-chip.active {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-.menu-items-grid {
+/* --- MODERNÍ KARTY: TASTETOWN & ISIC --- */
+.perks-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: stretch;
 }
 
-.menu-card {
+.perk-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 24px;
-    transition: all 0.25s ease;
+    border-radius: 26px;
+    padding: 34px 36px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-card.featured {
-    border: 2px solid var(--matcha);
-    background: #F4F9EE;
-}
-
-.menu-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--matcha);
-}
-
-.menu-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.menu-title {
-    font-family: var(--font-serif);
-    font-size: 21px;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-.menu-price {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--matcha);
-    background: var(--matcha-soft);
-    padding: 4px 12px;
-    border-radius: 99px;
-    white-space: nowrap;
-}
-
-.menu-desc {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-}
-
-.menu-cat-tag {
-    font-size: 11.5px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* TasteTown & ISIC Cards */
-.promo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.promo-card {
-    border-radius: 28px;
-    padding: 44px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     position: relative;
     overflow: hidden;
 }
 
-.promo-tastetown {
-    background: linear-gradient(135deg, #1C301D 0%, #2E4E30 100%);
-    color: white;
+.perk-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-.promo-isic {
-    background: linear-gradient(135deg, #F9E2E7 0%, #F5C7D2 100%);
-    color: #1C301D;
-    border: 1px solid rgba(0,0,0,0.05);
+.perk-card.perk-tt {
+    background: linear-gradient(160deg, #FFFFFF 0%, #F4F9EE 100%);
+    border-color: #DCE7D2;
 }
 
-.promo-card h3 {
-    font-family: var(--font-serif);
-    font-size: 32px;
+.perk-card.perk-isic {
+    background: linear-gradient(160deg, #FFFFFF 0%, #FDF5F7 100%);
+    border-color: #F2DCE2;
+}
+
+.perk-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
     margin-bottom: 14px;
-    line-height: 1.15;
 }
 
-.promo-card p {
-    font-size: 16px;
-    margin-bottom: 24px;
-    opacity: 0.9;
+.perk-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 13px;
+    border-radius: 99px;
+    margin-bottom: 12px;
 }
 
-.promo-features {
+.perk-badge.tt {
+    background: var(--matcha-soft);
+    color: var(--primary);
+}
+
+.perk-badge.isic {
+    background: #FCE8EE;
+    color: #8A2B46;
+}
+
+.perk-top h3 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.perk-big-tag {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 16px;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.perk-big-tag.tt {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+.perk-big-tag.isic {
+    background: #FCE8EE;
+    color: #8A2B46;
+}
+
+.perk-desc {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.perk-list {
     list-style: none;
     display: grid;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 28px;
-    font-weight: 600;
+    padding: 0;
 }
 
-.promo-features li {
+.perk-list li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     font-size: 14.5px;
+    color: var(--primary);
+    line-height: 1.45;
 }
+
+.perk-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--matcha-soft);
+    color: var(--matcha);
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.perk-card.perk-isic .perk-check {
+    background: #FCE8EE;
+    color: #8A2B46;
+}
+
+.perk-footer {
+    margin-top: auto;
+}
+
+@media (max-width: 820px) {
+    .perks-grid {
+        grid-template-columns: 1fr;
+    }
+    .perk-card {
+        padding: 28px 24px;
+    }
+}
+
 
 /* Hlavička sekce */
 .instagram-header {
@@ -1017,20 +1021,55 @@ footer {
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Dog friendly */
+/* --- DOG FRIENDLY SEKCE --- */
 .dog-card {
-    background: #EAF2E8;
-    border-radius: 24px;
-    padding: 36px 44px;
-    display: flex;
+    background: #E6F0E4 !important;
+    border-radius: 26px !important;
+    padding: 36px 56px !important;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
-.dog-card .section-tag { color: var(--text-muted); font-size: 11.5px; }
-.dog-card h2 { font-family: var(--font-serif); font-size: clamp(26px, 3.4vw, 34px); color: var(--primary); margin: 6px 0 12px; line-height: 1.2; }
-.dog-card p { color: var(--text-muted); max-width: 460px; }
-.dog-card img { width: 190px; height: auto; flex: 0 0 auto; }
+.dog-card > div {
+    max-width: 600px;
+}
+
+.dog-card h2 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    color: var(--primary);
+    margin: 6px 0 10px;
+}
+
+.dog-card p {
+    color: var(--text-muted);
+    font-size: 15.5px;
+    line-height: 1.6;
+}
+
+.dog-card img {
+    width: 165px !important;
+    height: auto !important;
+    flex-shrink: 0;
+    margin-right: 48px;
+}
+
+@media (max-width: 768px) {
+    .dog-card {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 30px 24px !important;
+        gap: 20px;
+    }
+    .dog-card img {
+        width: 140px !important;
+        margin-right: 0;
+    }
+}
 
 /* Click-to-load (Instagram reel, mapa) */
 .embed-placeholder {
@@ -1174,4 +1213,884 @@ footer div:last-child {
 .allergen-icon {
   font-size: 16px !important;
   flex-shrink: 0 !important;
+}
+
+/* ===== BESTSELLERY, ISIC PŘEPÍNAČ A SAMOSTATNÉ MENU ===== */
+.isic-bar-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.isic-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 99px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    user-select: none;
+    transition: border-color 0.2s ease;
+}
+
+.isic-switch:hover {
+    border-color: var(--matcha);
+}
+
+.isic-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.isic-slider {
+    position: relative;
+    width: 42px;
+    height: 24px;
+    background: #D6D3C9;
+    border-radius: 99px;
+    transition: background 0.25s ease;
+    flex-shrink: 0;
+}
+
+.isic-slider::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.isic-switch input:checked + .isic-slider {
+    background: var(--primary);
+}
+
+.isic-switch input:checked + .isic-slider::after {
+    transform: translateX(18px);
+}
+
+.isic-label {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.old-price {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 13.5px;
+    margin-right: 4px;
+}
+
+.menu-price.isic-active {
+    background: var(--pink-soft);
+    color: var(--primary);
+}
+
+/* Samostatná stránka menu.html */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--matcha);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 18px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.menu-tools-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.menu-search-wrap {
+    position: relative;
+    flex: 1 1 300px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.menu-search-wrap input {
+    width: 100%;
+    padding: 12px 18px 12px 42px;
+    border-radius: 99px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dark);
+    font-size: 14.5px;
+}
+
+.menu-search-wrap input:focus {
+    outline: 2px solid var(--matcha);
+    border-color: var(--matcha);
+}
+
+.addons-banner {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 13.5px;
+    color: var(--primary);
+}
+
+.btn-add-tray {
+    background: var(--bg-body);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-add-tray:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+}
+
+.menu-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 18px;
+}
+
+/* Plovoucí lišta kalkulačky útraty */
+.tray-bar {
+    position: fixed;
+    bottom: 18px;
+    left: 16px;
+    right: 16px;
+    z-index: 95;
+    pointer-events: none;
+}
+
+.tray-inner {
+    pointer-events: auto;
+    background: var(--primary);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 14px 22px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tray-summary {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+}
+
+.tray-names {
+    font-size: 12.5px;
+    color: #C7D8C5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tray-prices {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.tray-prices small {
+    display: block;
+    font-size: 11px;
+    color: #B6C9B4;
+}
+
+.tray-prices strong {
+    font-size: 17px;
+}
+
+.tray-isic {
+    background: rgba(249, 226, 231, 0.16);
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.tray-isic strong {
+    color: #F9E2E7;
+}
+
+.btn-tray-clear {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --- BESTSELLERY NA HLAVNÍ STRÁNCE S FOTKAMI --- */
+.bestsellers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.bestseller-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.25s ease;
+}
+
+.bestseller-card.featured {
+    border: 2px solid var(--matcha);
+    background: #F4F9EE;
+}
+
+.bestseller-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--matcha);
+}
+
+.bs-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 11px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+}
+
+.bs-badge.soft {
+    background: var(--surface-alt);
+    color: var(--primary);
+}
+
+/* Obal pro fotku produktu */
+.bs-image-box {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: #;
+}
+
+.bs-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bestseller-card:hover .bs-img {
+    transform: scale(1.05);
+}
+
+.bs-footer {
+    margin-top: auto;
+    padding-top: 14px;
+}
+/* --- STYLOVÁNÍ KOMPLETNÍHO MENU A FILTRŮ --- */
+.menu-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+}
+
+.filter-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 10px 22px;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 14.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-chip:hover, .filter-chip.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.menu-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-card.featured {
+    border: 2px solid var(--matcha);
+    background: #F4F9EE;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--matcha);
+}
+
+.menu-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.menu-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--matcha);
+    background: var(--matcha-soft);
+    padding: 4px 12px;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.menu-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.menu-cat-tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* --- MODERNÍ BENTO SEKCE: LIMITKA & PODZIMNÍ MENU --- */
+.seasonal-bento {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Levá karta: Matcha Marlenka */
+.bento-hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bento-hero-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.bento-hero-media {
+    position: relative;
+    height: 310px;
+    background: #FFFFF;
+    overflow: hidden;
+}
+
+.bento-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center 45%;
+}
+
+.bento-floating-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(28, 48, 29, 0.92);
+    backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 7px 14px;
+    border-radius: 99px;
+}
+
+.bento-hero-info {
+    padding: 26px 28px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bento-hero-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.bento-hero-head h3 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    color: var(--primary);
+}
+
+.bento-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--matcha);
+    background: var(--matcha-soft);
+    padding: 5px 14px;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.bento-hero-info p {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+}
+
+.bento-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Pravá karta: Interaktivní ochutnávka */
+.bento-showcase-card {
+    background: linear-gradient(155deg, #FBFDF9 0%, #F1F6EC 100%);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 28px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+}
+
+.showcase-top-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--matcha);
+    margin-bottom: 14px;
+}
+
+.showcase-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.showcase-tab {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 15px;
+    border-radius: 99px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.showcase-tab:hover {
+    border-color: var(--matcha);
+    color: var(--primary);
+}
+
+.showcase-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(28, 48, 29, 0.18);
+}
+
+.showcase-stage {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+    flex: 1;
+}
+
+.showcase-drink-visual {
+    position: relative;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #0F120F;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.showcase-aura {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(163, 198, 118, 0.32) 0%, transparent 70%);
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.showcase-drink-visual img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease, transform 0.25s ease;
+}
+
+.showcase-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.showcase-title-row h3 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.showcase-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--matcha);
+    background: var(--matcha-soft);
+    padding: 4px 12px;
+    border-radius: 99px;
+}
+
+.showcase-details p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+
+.flavor-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.flavor-notes span {
+    background: #F4F7F0;
+    color: var(--primary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 8px;
+}
+
+.showcase-link {
+    display: inline-block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--matcha);
+    text-decoration: none;
+}
+
+.showcase-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .seasonal-bento {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 580px) {
+    .showcase-stage {
+        grid-template-columns: 1fr;
+    }
+    .showcase-drink-visual {
+        height: 210px;
+    }
+}
+/* --- EDITORIAL SEKCE: LIMITOVANÁ PŘÍCHUŤ & PODZIMNÍ EDICE --- */
+.featured-drop-card {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+}
+
+.featured-drop-media {
+    background: #C7C1B6;
+    display: flex;
+    overflow: hidden;
+    min-height: 360px;
+}
+
+.featured-drop-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-drop-body {
+    padding: 34px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drop-pill {
+    align-self: flex-start;
+    background: var(--matcha-soft);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+}
+
+.drop-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.drop-title-row h3 {
+    font-family: var(--font-serif);
+    font-size: 34px;
+    color: var(--primary);
+    line-height: 1.15;
+}
+
+.drop-price {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--matcha);
+    background: var(--matcha-soft);
+    padding: 6px 16px;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.drop-desc {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 560px;
+    margin-bottom: 18px;
+}
+
+.drop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.drop-tags span {
+    background: #F4F7F0;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.drop-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* 4 podzimní karty pod Marlenkou */
+.seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.seasonal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.seasonal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--matcha);
+}
+
+.seasonal-img-wrap {
+    height: 210px;
+    background: #FFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.seasonal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.seasonal-card:hover .seasonal-img-wrap img {
+    transform: scale(1.04);
+}
+
+.seasonal-info {
+    padding: 18px 20px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.seasonal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.seasonal-head h4 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.seasonal-head span {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--matcha);
+    background: var(--matcha-soft);
+    padding: 3px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.seasonal-info p {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+@media (max-width: 920px) {
+    .featured-drop-card {
+        grid-template-columns: 1fr;
+    }
+    .seasonal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .featured-drop-body {
+        padding: 24px 22px;
+    }
+    .drop-title-row h3 {
+        font-size: 28px;
+    }
+    .seasonal-grid {
+        grid-template-columns: 1fr;
+    }
 }

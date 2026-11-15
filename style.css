@@ -1829,3 +1829,74 @@ footer div:last-child {
         padding: 28px 20px 24px;
     }
 }
+.rating-badge-link {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
+}
+.rating-badge-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--matcha);
+    box-shadow: var(--shadow-sm);
+}
+.btn-share {
+    background: var(--surface-alt);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    padding: 14px 22px;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-share:hover {
+    border-color: var(--matcha);
+    background: var(--matcha-soft);
+}
+
+.btn-share-mini {
+    margin-top: auto;
+    padding-top: 12px;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: var(--matcha);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.btn-share-mini:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.seasonal-card-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.seasonal-info-top {
+    padding: 18px 20px 10px;
+}
+
+.seasonal-info-top p {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.seasonal-card-bottom {
+    padding: 0 20px 18px;
+    margin-top: auto;
+}

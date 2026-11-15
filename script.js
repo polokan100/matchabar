@@ -220,15 +220,9 @@
     }
 
     document.addEventListener('click', function (e) {
-        var btn = e.target.closest('[data-share-drink]');
-        if (!btn) return;
-        e.preventDefault();
-        e.stopPropagation();
-
         var drink = btn.getAttribute('data-share-drink');
         var url = window.location.origin + window.location.pathname + '#limitky';
         var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
-        var fullMsg = text + ' ' + url;
         var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
         function showCopied() {
@@ -242,14 +236,14 @@
             }, 2200);
         }
 
-        if (isMobile && navigator.share) {
+    if (isMobile && navigator.share) {
             navigator.share({ title: drink + ' · Matcha bar Ostrava', text: text, url: url }).catch(function () {});
         } else if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(fullMsg).then(showCopied).catch(function () {
-                fallbackCopy(fullMsg, showCopied);
+            navigator.clipboard.writeText(url).then(showCopied).catch(function () {
+                fallbackCopy(url, showCopied);
             });
         } else {
-            fallbackCopy(fullMsg, showCopied);
+            fallbackCopy(url, showCopied);
         }
     });
 

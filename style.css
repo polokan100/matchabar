@@ -1568,7 +1568,6 @@ footer div:last-child {
     flex-direction: column;
     justify-content: space-between;
 }
-.menu-card.featured { border: 2px solid var(--matcha); background: #F4F9EE; }
 .menu-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--matcha); }
 
 /* --- POMOCNÉ TŘÍDY (NÁHRADA ZA INLINE STYLY) --- */

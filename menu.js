@@ -4,50 +4,52 @@
     var MENU_ITEMS = [
         // ✨ Limitované příchutě (5)
         { id: 1, name: "Matcha Marlenka", price: 159, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Pravá matcha, vrstva šlehačky, bohatý karamel a křupavý popcorn s příchutí marlenky." },
-        { id: 2, name: "Jablečný koláč", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Podzimní pohlazení – lahodná matcha, šlehačka, skořice a čerstvé plátky jablek." },
-        { id: 3, name: "Pumpkin Spice", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Hřejivé dýňové koření, šlehačka a křupavá skořicová drobenka." },
+        { id: 2, name: "Jablečný koláč", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Lahodná matcha, šlehačka, skořice a čerstvé plátky jablek." },
+        { id: 3, name: "Pumpkin Spice", price: 149, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Hřejivé koření, šlehačka a křupavá skořicová drobenka." },
         { id: 4, name: "Slaný karamel", price: 139, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Domácí slaný karamel, křupavá posypka a jemná matcha." },
         { id: 5, name: "Toffee Matcha", price: 139, cat: "limitky", tag: "✨ Limitovaná příchuť", desc: "Sametově krémová karamelka v kombinaci s výběrovou matchou." },
 
-        // 🍵 Matcha s mlékem (10)
-        { id: 6, name: "Malina", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Intenzivní sladkokyselá chuť čerstvých malin s matchou a mlékem.", featured: true },
-        { id: 7, name: "Ube Matcha", price: 159, cat: "mleko", tag: "🍵 S mlékem", desc: "Exotický fialový jam s jemnou oříškovou sladkostí." },
-        { id: 8, name: "Mango", price: 149, cat: "mleko", tag: "🍵 S mlékem", desc: "Bohatá tropická chuť zralého manga v harmonii s matchou." },
-        { id: 9, name: "Čokoláda", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Krémová čokoláda v kombinaci s pravou japonskou matchou." },
-        { id: 10, name: "Borůvka", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Osvěžující lesní borůvky zalité mlékem a čerstvou matchou." },
-        { id: 11, name: "Karamel", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Sladký karamelový nádech zjemňující zemitost zeleného čaje." },
-        { id: 12, name: "Banán", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Sametově krémová kombinace banánu, mléka a matchy." },
-        { id: 13, name: "Kokos", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Lehký exotický tón kokosu s jemně šlehanou matchou." },
-        { id: 14, name: "Vanilka", price: 139, cat: "mleko", tag: "🍵 S mlékem", desc: "Klasická voňavá vanilka s matchou a mlékem dle výběru." },
-        { id: 15, name: "Klasik Matcha Latte", price: 119, cat: "mleko", tag: "🍵 S mlékem", desc: "Čistá ceremoniální matcha našlehaná do sametové pěny s mlékem." },
+        // 🍵 S perlivou vodou (4)
+        { id: 6, name: "Malina", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Intenzivní sladkokyselá chuť malin" },
+        { id: 7, name: "Peach", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Šťavnatá broskvová sladkost s letním nádechem" },
+        { id: 8, name: "Limeta", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Svěží citrusová chuť s příjemnou kyselostí" },
+        { id: 9, name: "Meloun", price: 129, cat: "perliva", tag: "🍵 S perlivou vodou", desc: "Letní osvěžení plné šťavnatého vodního melounu" },
 
-        // 💧 Matcha s vodou (3)
-        { id: 16, name: "Usucha (čistá matcha)", price: 99, cat: "voda", tag: "💧 S vodou", desc: "Tradiční japonská příprava čisté matchy šlehané s vodou." },
-        { id: 17, name: "Matcha Tonic", price: 129, cat: "voda", tag: "💧 S vodou", desc: "Osvěžující kombinace toniku, ledu a čerstvě vyšlehané matchy." },
-        { id: 18, name: "Matcha Pomeranč", price: 129, cat: "voda", tag: "💧 S vodou", desc: "Čerstvá pomerančová šťáva s vrstvou japonské matchy na ledu." },
+        // 🍵 Klasické (s mlékem) (10)
+        { id: 10, name: "Marshmallow pečený", price: 159, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Sladký zážitek s pečeným marshmallow jemnou vanilkou" },
+        { id: 11, name: "Vanilla", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Klasická krémová vanilka v dokonalé harmonii s matchou" },
+        { id: 12, name: "Sakura", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Něžná květinová chuť japonské třešně" },
+        { id: 13, name: "Passion fruit", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Exotická a svěží chuť plná tropického šarmu" },
+        { id: 14, name: "Malina", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Intenzivní sladkokyselá chuť čerstvých malin" },
+        { id: 15, name: "Peach", price: 139, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Šťavnatá broskvová sladkost s letním nádechem" },
+        { id: 16, name: "Curacao", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Tropický koktejlový nádech modré laguny" },
+        { id: 17, name: "Ube Matcha", price: 159, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Exotický fialový jam s jemnou oříškovou sladkostí" },
+        { id: 18, name: "Mango", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Bohatá tropická chuť zralého manga" },
+        { id: 19, name: "Cukrová vata", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Sladká nostalgie" },
 
-        // ☕ Káva (4)
-        { id: 19, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "Výběrová káva s bohatou cremou." },
-        { id: 20, name: "Espresso Tonic", price: 109, cat: "kava", tag: "☕ Káva", desc: "Ledové osvěžení z výběrového espressa a kvalitního toniku." },
-        { id: 21, name: "Cappuccino", price: 79, cat: "kava", tag: "☕ Káva", desc: "Espresso s jemně našlehanou mléčnou mikropěnou." },
-        { id: 22, name: "Flat White", price: 89, cat: "kava", tag: "☕ Káva", desc: "Dvojité espresso se sametově našlehaným mlékem." },
+        // 🥥 S kokosovou vodou (1)
+        { id: 20, name: "Kokos", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Krémová exotika pravého kokosu" },
 
-        // 🍋 Nealko & limonády (6)
-        { id: 23, name: "Malinová limonáda", price: 89, cat: "nealko", tag: "🍋 Nealko", desc: "Domácí perlivá limonáda z čerstvých malin a máty." },
-        { id: 24, name: "Marakuja limonáda", price: 89, cat: "nealko", tag: "🍋 Nealko", desc: "Exotická osvěžující limonáda s pravou marakujou." },
-        { id: 25, name: "Mango limonáda", price: 89, cat: "nealko", tag: "🍋 Nealko", desc: "Sladká ovocná limonáda ze zralého manga." },
-        { id: 26, name: "Yuzu limonáda", price: 95, cat: "nealko", tag: "🍋 Nealko", desc: "Japonský citrus yuzu v osvěžující perlivé podobě." },
-        { id: 27, name: "Domácí ledový čaj", price: 79, cat: "nealko", tag: "🍋 Nealko", desc: "Louhovaný sypaný čaj s ovocem a bylinkami." },
-        { id: 28, name: "Filtrovaná voda (0,5 l)", price: 35, cat: "nealko", tag: "🍋 Nealko", desc: "Čerstvá perlivá nebo neperlivá voda s citronem." },
+        // ☕ Káva (5)
+        { id: 21, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 22, name: "Lungo", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 23, name: "Americano", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 24, name: "Cappuccino", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 25, name: "Latte", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
 
-        // 🍩 Dezerty (7)
-        { id: 29, name: "Koláč tvaroh / borůvka", price: 69, cat: "dezerty", tag: "🍩 Dezerty", desc: "Vláčný domácí koláč s tvarohem, borůvkami a křupavou drobenkou." },
-        { id: 30, name: "Kobliha pistácie", price: 79, cat: "dezerty", tag: "🍩 Dezerty", desc: "Nadýchaná ručně dělaná kobliha plněná jemným pistáciovým krémem." },
-        { id: 31, name: "Kobliha malina", price: 75, cat: "dezerty", tag: "🍩 Dezerty", desc: "Čerstvá kobliha s domácím malinovým rozvarem." },
-        { id: 32, name: "Kobliha vanilkový krém", price: 75, cat: "dezerty", tag: "🍩 Dezerty", desc: "Klasická nadýchaná kobliha s pravou vanilkou." },
-        { id: 33, name: "Matcha Makronky", price: 49, cat: "dezerty", tag: "🍩 Dezerty", desc: "Křupavé makronky od Maliny." },
-        { id: 34, name: "Matcha Cheesecake", price: 99, cat: "dezerty", tag: "🍩 Dezerty", desc: "Krémový cheesecake s výraznou chutí japonské matchy." },
-        { id: 35, name: "Skořicový šnek", price: 69, cat: "dezerty", tag: "🍩 Dezerty", desc: "Voňavý kynutý šnek se skořicí a jemnou polevou." }
+        // 🍋 Limonády (4)
+        { id: 26, name: "Malina", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 27, name: "Mango", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 28, name: "Broskev", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 29, name: "Limeta", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+
+        // 🍩 Koblihy, koláčky & makronky (6)
+        { id: 30, name: "Lotus", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 31, name: "Mascarpone s rybízem", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 32, name: "Pistácie Malina", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 33, name: "Kinder Bueno", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 34, name: "Koláčky", price: 69, cat: "dezerty", tag: "🥧 Dezerty", desc: "Čerstvé koláčky od @larrysbaking" },
+        { id: 35, name: "Makronky", price: 49, cat: "dezerty", tag: "🍪 Dezerty", desc: "Domácí makronky od cukrářky Maliny" }
     ];
 
     var grid = document.getElementById('menu-grid');
@@ -89,12 +91,14 @@
 
         filtered.forEach(function (item) {
             var card = document.createElement('article');
-            card.className = 'menu-card' + (item.featured ? ' featured' : '');
+            card.className = 'menu-card';
 
             var finalPrice = isicActive ? calcIsic(item.price) : item.price;
             var priceHtml = isicActive
                 ? '<span class="old-price">' + item.price + ' Kč</span> ' + finalPrice + ' Kč'
                 : item.price + ' Kč';
+
+            var descHtml = item.desc ? '<p class="menu-desc">' + item.desc + '</p>' : '';
 
             card.innerHTML =
                 '<div>' +
@@ -102,7 +106,7 @@
                         '<h3 class="menu-title">' + item.name + '</h3>' +
                         '<span class="menu-price' + (isicActive ? ' isic-active' : '') + '">' + priceHtml + '</span>' +
                     '</div>' +
-                    '<p class="menu-desc">' + item.desc + '</p>' +
+                    descHtml +
                 '</div>' +
                 '<div class="menu-card-bottom">' +
                     '<span class="menu-cat-tag">' + item.tag + '</span>' +

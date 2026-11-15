@@ -1519,7 +1519,7 @@ footer div:last-child {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
-    background-color: #;
+    background-color: #FFFFFF;
 }
 
 .bs-img {
@@ -1630,269 +1630,7 @@ footer div:last-child {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* --- MODERNÍ BENTO SEKCE: LIMITKA & PODZIMNÍ MENU --- */
-.seasonal-bento {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 24px;
-    align-items: stretch;
-}
 
-/* Levá karta: Matcha Marlenka */
-.bento-hero-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 26px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.bento-hero-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.bento-hero-media {
-    position: relative;
-    height: 310px;
-    background: #FFFFF;
-    overflow: hidden;
-}
-
-.bento-hero-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center 45%;
-}
-
-.bento-floating-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: rgba(28, 48, 29, 0.92);
-    backdrop-filter: blur(8px);
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    padding: 7px 14px;
-    border-radius: 99px;
-}
-
-.bento-hero-info {
-    padding: 26px 28px 30px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.bento-hero-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-.bento-hero-head h3 {
-    font-family: var(--font-serif);
-    font-size: 28px;
-    color: var(--primary);
-}
-
-.bento-price {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--matcha);
-    background: var(--matcha-soft);
-    padding: 5px 14px;
-    border-radius: 99px;
-    white-space: nowrap;
-}
-
-.bento-hero-info p {
-    color: var(--text-muted);
-    font-size: 14.5px;
-    line-height: 1.55;
-    margin-bottom: 22px;
-}
-
-.bento-actions {
-    margin-top: auto;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Pravá karta: Interaktivní ochutnávka */
-.bento-showcase-card {
-    background: linear-gradient(155deg, #FBFDF9 0%, #F1F6EC 100%);
-    border: 1px solid var(--border);
-    border-radius: 26px;
-    padding: 28px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: var(--shadow-sm);
-}
-
-.showcase-top-label {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--matcha);
-    margin-bottom: 14px;
-}
-
-.showcase-tabs {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-}
-
-.showcase-tab {
-    background: #FFFFFF;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 8px 15px;
-    border-radius: 99px;
-    font-size: 13.5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.showcase-tab:hover {
-    border-color: var(--matcha);
-    color: var(--primary);
-}
-
-.showcase-tab.active {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: #FFFFFF;
-    box-shadow: 0 4px 12px rgba(28, 48, 29, 0.18);
-}
-
-.showcase-stage {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 24px;
-    align-items: center;
-    background: #FFFFFF;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 22px;
-    flex: 1;
-}
-
-.showcase-drink-visual {
-    position: relative;
-    height: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    background: #0F120F;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.showcase-aura {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, rgba(163, 198, 118, 0.32) 0%, transparent 70%);
-    pointer-events: none;
-    transition: background 0.3s ease;
-}
-
-.showcase-drink-visual img {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: opacity 0.2s ease, transform 0.25s ease;
-}
-
-.showcase-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.showcase-title-row h3 {
-    font-family: var(--font-serif);
-    font-size: 24px;
-    color: var(--primary);
-}
-
-.showcase-price {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--matcha);
-    background: var(--matcha-soft);
-    padding: 4px 12px;
-    border-radius: 99px;
-}
-
-.showcase-details p {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.55;
-    margin-bottom: 16px;
-}
-
-.flavor-notes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 18px;
-}
-
-.flavor-notes span {
-    background: #F4F7F0;
-    color: var(--primary);
-    font-size: 12.5px;
-    font-weight: 600;
-    padding: 5px 11px;
-    border-radius: 8px;
-}
-
-.showcase-link {
-    display: inline-block;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--matcha);
-    text-decoration: none;
-}
-
-.showcase-link:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 960px) {
-    .seasonal-bento {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 580px) {
-    .showcase-stage {
-        grid-template-columns: 1fr;
-    }
-    .showcase-drink-visual {
-        height: 210px;
-    }
-}
 /* --- EDITORIAL SEKCE: LIMITOVANÁ PŘÍCHUŤ & PODZIMNÍ EDICE --- */
 .featured-drop-card {
     display: grid;
@@ -2019,7 +1757,7 @@ footer div:last-child {
 
 .seasonal-img-wrap {
     height: 210px;
-    background: #FFFFF;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2094,3 +1832,25 @@ footer div:last-child {
         grid-template-columns: 1fr;
     }
 }
+/* --- POMOCNÉ TŘÍDY (NÁHRADA ZA INLINE STYLY) --- */
+.rating-subtext { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+.header-compact { margin-bottom: 30px; }
+.menu-cta-box { text-align: center; margin-top: 36px; }
+.left-section-head { margin-bottom: 28px; }
+.left-section-head .section-title { margin-bottom: 6px; }
+.left-section-desc { color: var(--text-muted); font-size: 16px; }
+.no-margin-bottom { margin-bottom: 0; }
+.rating-badge-text { font-size: 13px; color: var(--text-muted); }
+.voucher-intro { color: var(--text-muted); margin-bottom: 24px; }
+.voucher-list { list-style: none; display: grid; gap: 12px; font-weight: 500; margin-bottom: 28px; }
+.voucher-ig-link { color: var(--matcha); text-decoration: underline; }
+.voucher-kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; }
+.voucher-brand-title { font-family: var(--font-serif); font-size: 32px; font-weight: 700; margin: 18px 0 10px; line-height: 1.15; }
+.voucher-value-text { font-size: 18px; font-weight: 600; }
+.voucher-foot-note { margin-top: 34px; font-size: 12px; opacity: 0.75; }
+.modal-heading { font-family: var(--font-serif); font-size: 28px; color: var(--primary); margin-bottom: 6px; }
+.modal-subtext { color: var(--text-muted); font-size: 14px; }
+.form-submit-wrap { margin-top: 6px; }
+.btn-full-width { width: 100%; justify-content: center; }
+.footer-socials { display: flex; gap: 16px; }
+.footer-bottom { text-align: center; margin-top: 24px; font-size: 13px; }

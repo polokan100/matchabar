@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polokan100.github.io/matchabar/sitemap.xml  

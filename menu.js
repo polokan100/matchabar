@@ -27,29 +27,30 @@
         { id: 18, name: "Mango", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Bohatá tropická chuť zralého manga" },
         { id: 19, name: "Cukrová vata", price: 149, cat: "mleko", tag: "🍵 Klasické (s mlékem)", desc: "Sladká nostalgie" },
 
-        // 🥥 S kokosovou vodou (1)
+        // 🥥 S kokosovou vodou (2)
         { id: 20, name: "Kokos", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Krémová exotika pravého kokosu" },
+        { id: 21, name: "Matcha Claud", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Kokosová voda +matcha + smetana = lahodný obláček s příchutí dle tvé volbyy" },
 
         // ☕ Káva (5)
-        { id: 21, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
-        { id: 22, name: "Lungo", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
-        { id: 23, name: "Americano", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
-        { id: 24, name: "Cappuccino", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
-        { id: 25, name: "Latte", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 22, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 23, name: "Lungo", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 24, name: "Americano", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 25, name: "Cappuccino", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
+        { id: 26, name: "Latte", price: 75, cat: "kava", tag: "☕ Káva", desc: "" },
 
         // 🍋 Limonády (4)
-        { id: 26, name: "Malina", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
-        { id: 27, name: "Mango", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
-        { id: 28, name: "Broskev", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
-        { id: 29, name: "Limeta", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 27, name: "Malina", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 28, name: "Mango", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 29, name: "Broskev", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
+        { id: 30, name: "Limeta", price: 85, cat: "limonady", tag: "🍋 Limonády", desc: "" },
 
         // 🍩 Koblihy, koláčky & makronky (6)
-        { id: 30, name: "Lotus", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
-        { id: 31, name: "Mascarpone s rybízem", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
-        { id: 32, name: "Pistácie Malina", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
-        { id: 33, name: "Kinder Bueno", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
-        { id: 34, name: "Koláčky", price: 69, cat: "dezerty", tag: "🥧 Dezerty", desc: "Čerstvé koláčky od @larrysbaking" },
-        { id: 35, name: "Makronky", price: 49, cat: "dezerty", tag: "🍪 Dezerty", desc: "Domácí makronky od cukrářky Maliny" }
+        { id: 31, name: "Lotus", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 32, name: "Mascarpone s rybízem", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 33, name: "Pistácie Malina", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 34, name: "Kinder Bueno", price: 79, cat: "dezerty", tag: "🍩 Koblihy", desc: "" },
+        { id: 35, name: "Koláčky", price: 69, cat: "dezerty", tag: "🥧 Dezerty", desc: "Čerstvé koláčky od @larrysbaking" },
+        { id: 36, name: "Makronky", price: 49, cat: "dezerty", tag: "🍪 Dezerty", desc: "Domácí makronky od cukrářky Maliny" }
     ];
 
     var grid = document.getElementById('menu-grid');

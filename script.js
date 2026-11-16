@@ -204,4 +204,33 @@
 
     updateOpeningStatus();
     setInterval(updateOpeningStatus, 60000);
+    window.shareDrink = function (btn) {
+    var drink = btn.getAttribute('data-share-drink');
+    var url = window.location.origin + window.location.pathname + '#limitky';
+    var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
+    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    function done() {
+        if (btn.dataset.copying) return;
+        btn.dataset.copying = '1';
+        var orig = btn.textContent;
+        btn.textContent = 'Odkaz zkopírován ✓';
+        setTimeout(function () {
+            btn.textContent = orig;
+            delete btn.dataset.copying;
+        }, 2200);
+    }
+
+    if (isMobile && navigator.share) {
+        navigator.share({ title: drink + ' · Matcha bar Ostrava', text: text, url: url }).catch(function () {});
+        return;
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(done).catch(function () {
+            window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
+        });
+    } else {
+        window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
+    }
+};
 })();

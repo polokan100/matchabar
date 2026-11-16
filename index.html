@@ -626,32 +626,7 @@ Určitě zde nejdu naposledy 🌸</blockquote>
         </div>
     </footer>
 
-    <script>
-    function shareDrink(btn) {
-        var drink = btn.getAttribute('data-share-drink');
-        var url = window.location.origin + window.location.pathname + '#limitky';
-        var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
-        var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        function done() {
-            var orig = btn.textContent;
-            btn.textContent = 'Odkaz zkopírován ✓';
-            setTimeout(function () { btn.textContent = orig; }, 2200);
-        }
-
-        if (isMobile && navigator.share) {
-            navigator.share({ title: drink + ' · Matcha bar Ostrava', text: text, url: url }).catch(function () {});
-            return;
-        }
-        if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(url).then(done).catch(function () {
-                window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
-            });
-        } else {
-            window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
-        }
-    }
-    </script>
-    <script src="script.js?v=12" defer></script>
+    <script src="script.js?v=13" defer></script>
 </body>
 </html>

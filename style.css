@@ -452,11 +452,16 @@ section.container {
     margin-bottom: 10px;
 }
 
-.menu-title {
+   .menu-title {
     font-family: var(--font-serif);
     font-size: 21px;
     font-weight: 700;
     color: var(--primary);
+    
+    .bestseller-card .menu-title {
+    font-size: 18.5px;
+    line-height: 1.25;
+}
 }
 
 .menu-price {

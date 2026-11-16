@@ -178,7 +178,7 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Odesílám…';
 
-            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
+fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(data)
@@ -201,6 +201,10 @@
             });
         });
     }
+
+    updateOpeningStatus();
+    setInterval(updateOpeningStatus, 60000);
+})();
 
     function fallbackCopy(text, onDone) {
         var ta = document.createElement('textarea');

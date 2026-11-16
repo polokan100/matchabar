@@ -204,7 +204,9 @@
 
     updateOpeningStatus();
     setInterval(updateOpeningStatus, 60000);
-    window.shareDrink = function (btn) {
+})();
+
+window.shareDrink = function (btn) {
     var drink = btn.getAttribute('data-share-drink');
     var url = window.location.origin + window.location.pathname + '#limitky';
     var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
@@ -233,4 +235,3 @@
         window.prompt('Zkopíruj odkaz a pošli kámošovi:', url);
     }
 };
-})();

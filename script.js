@@ -178,7 +178,7 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Odesílám…';
 
-fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
+            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(data)
@@ -201,60 +201,6 @@ fetch('https://formsubmit.co/ajax/' + encodeURIComponent(RESERVATION_EMAIL), {
             });
         });
     }
-
-    updateOpeningStatus();
-    setInterval(updateOpeningStatus, 60000);
-})();
-
-    function fallbackCopy(text, onDone) {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.setAttribute('readonly', '');
-        ta.style.position = 'fixed';
-        ta.style.top = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        try {
-            document.execCommand('copy');
-            onDone();
-        } catch (err) {
-            window.prompt('Zkopíruj odkaz a pošli kámošovi:', text);
-        }
-        document.body.removeChild(ta);
-    }
-
-    document.addEventListener('click', function (e) {
-        var btn = e.target.closest('[data-share-drink]');
-        if (!btn) return;
-        e.preventDefault();
-        e.stopPropagation();
-
-        var drink = btn.getAttribute('data-share-drink');
-        var url = window.location.origin + window.location.pathname + '#limitky';
-        var text = 'Hele, v Matcha baru v Porubě mají sezónní ' + drink + ' 🍵✨ Zajdeme?';
-        var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-        function showCopied() {
-            if (btn.dataset.copying) return;
-            btn.dataset.copying = '1';
-            var orig = btn.textContent;
-            btn.textContent = 'Odkaz zkopírován ✓';
-            setTimeout(function () {
-                btn.textContent = orig;
-                delete btn.dataset.copying;
-            }, 2200);
-        }
-
-        if (isMobile && navigator.share) {
-            navigator.share({ title: drink + ' · Matcha bar Ostrava', text: text, url: url }).catch(function () {});
-        } else if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(url).then(showCopied).catch(function () {
-                fallbackCopy(url, showCopied);
-            });
-        } else {
-            fallbackCopy(url, showCopied);
-        }
-    });
 
     updateOpeningStatus();
     setInterval(updateOpeningStatus, 60000);

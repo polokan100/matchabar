@@ -1905,3 +1905,17 @@ footer div:last-child {
     padding: 0 20px 18px;
     margin-top: auto;
 }
+.bestseller-card .menu-card-top {
+    align-items: center;
+    gap: 6px;
+}
+
+.bestseller-card .menu-title {
+    font-size: 16.5px;
+    white-space: nowrap;
+}
+
+.bestseller-card .menu-price {
+    font-size: 14px;
+    padding: 3px 9px;
+}

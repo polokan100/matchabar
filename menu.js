@@ -29,7 +29,7 @@
 
         // 🥥 S kokosovou vodou (2)
         { id: 20, name: "Kokos", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Krémová exotika pravého kokosu" },
-        { id: 21, name: "Matcha Claud", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Kokosová voda +matcha + smetana = lahodný obláček s příchutí dle tvé volbyy" },
+        { id: 21, name: "Matcha Cloud", price: 139, cat: "kokos", tag: "🥥 S kokosovou vodou", desc: "Kokosová voda +matcha + smetana = lahodný obláček s příchutí dle tvé volbyy" },
 
         // ☕ Káva (5)
         { id: 22, name: "Espresso", price: 59, cat: "kava", tag: "☕ Káva", desc: "" },
